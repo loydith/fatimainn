@@ -35,12 +35,19 @@ body{
   width: 100%;
 }
 #location, #nombre, #number, #email, #checkin, #checkout{ 
-  color : black;
-  font-size:rgb(56, 48, 48);
+  color :  rgb(37, 26, 26);
+  font-size:10px;
+}
+#texto{
+  font-size: 10px;
+  color :  rgb(37, 26, 26);
+}
+#texto-centro{
+  text-align: center;
 }
 p{
   font-size:rgb(56, 48, 48); 
-  font-size: 12px;
+  font-size: 8px;
 }
 .card-stacked{
   font-size:rgb(56, 48, 48); 
@@ -48,30 +55,49 @@ p{
 #orange{
   border: .8px solid orange;
 }
+#contactanos {
+  border: .8px solid orange;
+  
+}
+
 #add-event{
   text-align: center;
 }
+#btn-centro{
+  
+}
 h1{
-  font-size:rgb(56, 48, 48); 
-  font-size: 18px;
+  color:rgb(56, 48, 48); 
+  font-size: 12px;
 }
 h3{
-  font-size: orange;
-  font-size: 18px;
+  color: rgb(56, 48, 48); 
+  font-size: 12px;
 }
 .card-action, .card-image{
     color: orange;
 }
 h2{
-  font-size:rgb(56, 48, 48); 
-  font-size: 18px;
-  /* text-align: center; */
+  color:rgb(56, 48, 48); 
+  font-size: 12px;
+}
+h4{
+  color:rgb(56, 48, 48); 
+  font-size: 10px;
 }
 .material-icons{
   height: 20px;
 }
 #letra{
   font-size:rgb(56, 48, 48); 
+}
+.btn{
+  background: orange;
+
+}
+#card{
+  border: .8px solid orange;
+  text-align: center;
 }
 #footer {
     background-color: rgb(10, 148, 79);

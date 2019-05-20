@@ -10,6 +10,7 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css "href="style.css">
 </head>
 <body>
@@ -69,49 +70,56 @@
   <!-- Create the form -->
 
   <div class="row">
-      <div class="col s6">
-    <form id="event-form">
-      <h1>Seleccione el tipo de habitación</h1>
-        <form action="#">
-          <p  id="orange"></p>
-        </form>
-      <label for="nombre-input" id="nombre">Nombre Completo</label>
+      <div class="col s6" id="contactanos">
+  <!-- formulario -->
+    <form>
+      <label for="nombre-input" id="nombre"><i class="fas fa-user"></i>Nombre Completo</label>
       <input type="text" id="nombre-input" /><br />
       <div class="col s6">
-            <label for="number-input" id="number">Teléfono</label>
+            <label for="number-input" id="number"><i class="fas fa-phone"></i>Teléfono</label>
             <input type="email" id="number-input" /><br />
       </div>
       <div class="col s6">
-            <label for="email-input" id="email">Correo Electrónico</label>
+            <label for="email-input" id="email"><i class="far fa-envelope"></i>Correo Electrónico</label>
              <input type="number" id="email-input" /><br />
       </div>
       <div class="col s6">
-           <label for="start-date-input" id="checkin">Check In</label>
+           <label for="start-date-input" id="checkin"><i class="far fa-calendar-alt"></i>Check In</label>
            <input type="date" id="start-date-input" /><br />
        </div>
        <div class="col s6">
-          <label for="end-date-input" id="checkout">Check Out</label>
+          <label for="end-date-input" id="checkout"><i class="far fa-calendar-alt"></i>Check Out</label>
           <input type="date" id="end-date-input" /><br />
         </div>
-        <!-- seleccionar habitación -->
-  
-        <div class="col s6">
+        
+        <div class="col s12">
+          <!-- seleccionar habitación -->
+        <form action="#">
+            <p  id="orange"></p>
+          </form>
+          <h1 id="texto-centro">Seleccione el tipo de habitación</h1>
+          <form action="#">
+              <p  id="orange"></p>
+            </form>
+        </div>
+          <!-- botonoes para seleccionar -->
+          <div class="col s6">
           <p>
           <label>
             <input class="with-gap" name="group1" type="radio"  checked />
-            <span>Habitación Individual Economica</span>
+            <span id ="texto">Habitación Individual Economica</span>
           </label>
           </p>
           <p>
             <label>
               <input class="with-gap" name="group1" type="radio" id="letra" />
-              <span>Habitación Matrimonial Economica</span>
+              <span id ="texto">Habitación Matrimonial Economica</span>
             </label>
           </p>
            <p>
               <label>
                 <input class="with-gap" name="group1" type="radio" id="letra"/>
-                <span>Habitación 2Camas Economica</span>
+                <span id ="texto">Habitación 2Camas Economica</span>
               </label>
             </p>
         </div>
@@ -120,19 +128,19 @@
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" id="letra"/>
-            <span>Habitación Individual Superior</span>
+            <span id ="texto">Habitación Individual Superior</span>
           </label>
         </p>
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" id="letra"/>
-            <span>Habitación Matrimonial Superior</span>
+            <span id ="texto">Habitación Matrimonial Superior</span>
           </label>
         </p>
           <p>
               <label>
                 <input class="with-gap" name="group1" type="radio" id="letra" />
-                <span>Habitación 2Camas Superior</span>
+                <span id ="texto">Habitación 2Camas Superior</span>
               </label>
             </p>
         </div>
@@ -144,33 +152,77 @@
     </div>
   
     <!-- termino de formulario -->
+
+
+
   <!-- comienzo de texto -->
     <div class="col s6">
-      <div><h3>Información Importante para su reserva</h3>
+      <!-- cards de contactos -->
+  <!-- links for phone -->
+  <div class="col s6">
+        <div class="card blue-light darken-1" id="card">
+            <h4 class="card-title"><img src="RedesSociales/phone.png" width="30px" alt="30px">Contactos</h4>
+            <p>
+              +(51) 042 566 359 <br>
+              +(51) 942 889 047 <br>
+              +(51) 986 585 921 <br>
+              +1 804-4775524 English
+            </p> 
+        </div>
+    </div>
+  
+  <!-- links for email -->
+  <div class="col s6">
+    <div class="card blue-light darken-1" id="card">
+        <h4 class="card-title">Redes Sociales</h4>
+        <p>
+            <a href="mailto:loydith@gmail.com">ventas@fatimacamilainn.com</a><br><br>
+            <img src="RedesSociales/email.png" width="30px" alt="30px"><a href="mailto:loydith@gmail.com">
+          <a href="https://www.facebook.com/fatimainnhotel"><img src="RedesSociales/facebook.png" width="30px" alt="30px"></a>
+          <a href="https://www.linkedin.com/in/hotelfatimainn"><img src="RedesSociales/in.png" width="30px" alt="30px"></a>
+          <a href="https://twitter.com/hotelfatimainn"><img src="RedesSociales/twitter.png" width="30px" alt="30px"></a>
+          <a href="https://www.instagram.com/hotelfatimainn/"><img src="RedesSociales/instagram.png" width="30px" alt="30px"></a>
+        </p> 
+    </div>
+  </div>
+
+
+
+<!-- termino de cards de contactos -->
+      <div class="col s12">
           <form action="#">
             <p  id="orange"></p>
           </form>
-        <p>
-            	Le informamos que la hora de ingreso “Check In” es a las 13:00pm y Salida “Check Out” 12:30pm. <br>
-            	En el caso si requieran extender su estancia, éste tiene un costo adicional cuyo importe es de S/.40.00. <br>
-            	Para la confirmación de su reserva deberá realizar el pago de su primera noche.<br>
-            	Debe contactarnos a ventas@fatimacamilainn.com para enviarles nuestros datos de la empresa.<br>
-            	Contamos con pago Online a través de Visa Net.<br>
-            	Todas la reservaciones directas cuentan con taxi gratuito.<br>
-            	En las reservaciones grupales no aplica taxi gratuito.<br>
-            	Cuenta con una capacidad máxima de 43 personas.<br>
+      <div><h3 class="card-title">Información Importante para su reserva</h3>
+          <form action="#">
+            <p  id="orange"></p>
+          </form>
+        </div>
+        <h4>
+            <i class="far fa-calendar-alt"></i> Le informamos que la hora de ingreso “Check In” es a las 13:00pm y Salida “Check Out” 12:30pm. <br>
+            •  En el caso si requieran extender su estancia, éste tiene un costo adicional cuyo importe es de S/.40.00. <br>
+            •  Para la confirmación de su reserva deberá realizar el pago de su primera noche.<br>
+            •  Debe contactarnos a ventas@fatimacamilainn.com para enviarles nuestros datos de la empresa.<br>
+            •  Contamos con pago Online a través de Visa Net.<br>
+            <i class="fas fa-taxi"></i> Todas la reservaciones directas cuentan con taxi gratuito.<br>
+            •  En las reservaciones grupales no aplica taxi gratuito.<br>
+            <i class="fas fa-user"></i> Cuenta con una capacidad máxima de 43 personas.<br>
             	Fátima Inn Hotel cuenta con:<br>
-            • 6 Habitaciones Individuales (Camas de 2 Plazas c/u). <br>
-            • 7 Habitaciones Matrimoniales (Camas de 2 Plazas c/u). <br>
-            •  2  Habitaciones Dobles ( De 2 Camas de 2 plazas c/u).<br>
-            •  2  Habitaciones Dobles (1 Cama de 2 Plazas y 1 Cama de 1 ½ Plaza).<br>
-            •  1  Habitación Triple (2 Camas de 2 Plazas c/u y 1 Cama de 1½ Plaza).<br>
-             Niños de 0 entre 10 años no paga alojamiento, solo extra S/.10 por desayuno.<br>
+                <i class="fas fa-bed"></i> 6 Habitaciones Individuales (Camas de 2 Plazas c/u). <br>
+                <i class="fas fa-bed"></i> 7 Habitaciones Matrimoniales (Camas de 2 Plazas c/u). <br>
+                <i class="fas fa-bed"></i> <i class="fas fa-bed"></i> 2  Habitaciones Dobles ( De 2 Camas de 2 plazas c/u).<br>
+                <i class="fas fa-bed"></i> <i class="fas fa-bed"></i> 2  Habitaciones Dobles (1 Cama de 2 Plazas y 1 Cama de 1 ½ Plaza).<br>
+                <i class="fas fa-bed"></i> <i class="fas fa-bed"></i>  <i class="fas fa-bed"></i> 1  Habitación Triple (2 Camas de 2 Plazas c/u y 1 Cama de 1½ Plaza).<br>
+             Niños de 0 entre 10 años no paga alojamiento,<i class="fas fa-utensils"></i> solo extra S/.10 por desayuno.<br>
              Para reservaciones que desean toda las habitaciones contamos con precios especiales, Llamenos +51 942889047.<br>
             	Nos ubicamos en el centro de la ciudad, a 10 pasos de la Plaza de Armas de la Ciudad de Tarapoto.
-          </p>
+        </h4>
       </div>
     </div>
+
+
+
+    
   </div>
   
   
