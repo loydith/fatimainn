@@ -1,0 +1,83 @@
+body{
+    background: rgb(249, 250, 248);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(37, 26, 26);
+
+}
+.nav-wrapper {
+    background-color: rgb(74, 158, 116);   
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    height: 150px;
+}
+#nav-head{
+    height: 100px;
+    
+}
+#mobile-demo{
+  color: black;
+}
+#right{
+  color: rgb(37, 26, 26);
+}
+.btn .btn-floating .pulse{
+  size: 12px;
+}
+
+.hide-on-med-and-down{
+    color: rgb(37, 26, 26);
+}
+.header{
+    font-size: 1.5em;
+    color:orange;
+}
+#event-form{
+  width: 100%;
+}
+#location, #nombre, #number, #email, #checkin, #checkout{ 
+  color : black;
+  font-size:rgb(56, 48, 48);
+}
+p{
+  font-size:rgb(56, 48, 48); 
+  font-size: 12px;
+}
+.card-stacked{
+  font-size:rgb(56, 48, 48); 
+}
+#orange{
+  border: .8px solid orange;
+}
+#add-event{
+  text-align: center;
+}
+h1{
+  font-size:rgb(56, 48, 48); 
+  font-size: 18px;
+}
+h3{
+  font-size: orange;
+  font-size: 18px;
+}
+.card-action, .card-image{
+    color: orange;
+}
+h2{
+  font-size:rgb(56, 48, 48); 
+  font-size: 18px;
+  /* text-align: center; */
+}
+.material-icons{
+  height: 20px;
+}
+#letra{
+  font-size:rgb(56, 48, 48); 
+}
+#footer {
+    background-color: rgb(10, 148, 79);
+    height: 50px;
+    font-size: .7em;
+    padding-top: 5px;
+}
+
+

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservaciones</title>
+    <!-- materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css "href="style.css">
+</head>
+<body>
+    <!-- Reservaciones -->
+<div class="container">
+      <!-- Dropdown Structure  web-->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="mediodia.html">Media día</a></li>
+         <li><a href="diacompleto.html">Día Completo</a></li>
+         <li><a href="paqueteturistico.html">Paquete Turístico</a></li>
+        <li class="divider"></li>
+        <li><a id="salir" href="#!">Salir</a></li>
+      </ul>
+      <!-- Dropdown Structure  mobile-->
+      <ul id="dropdown2" class="dropdown-content">
+        <li><a href="mediodia.html">Media día</a></li>
+         <li><a href="diacompleto.html">Día Completo</a></li>
+         <li><a href="paqueteturistico.html">Paquete Turístico</a></li>
+        <li class="divider"></li>
+        <li><a id="salir" href="#!">Salir</a></li>
+      </ul>
+      <!-- The new nav -->
+      <nav id="nav-head">
+        <div class="nav-wrapper">
+            <img src="images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+          <ul class="right hide-on-med-and-down">
+              <li><a id="inicio" href="index.html">Inicio</a></li>
+               <li><a id="habitaciones" href="habitaciones.html">Habitaciones</a></li>
+               <li><a id="contactos" href="contactos.html">Contáctenos</a></li>
+               <li><a id="comodidades" href="auditorio.html">Auditorio</a></li>
+               <li><a id="explore" href="explore.html">Explore</a></li>
+        <!-- Dropdown Trigger -->
+              <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
+              <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones.html">Reserva</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <ul class="sidenav" id="mobile-demo">
+          <li><a id="inicio" href="index.html">Inicio</a></li>
+          <li><a id="habitaciones" href="habitaciones.html">Habitaciones</a></li>
+          <li><a id="contactos" href="contactos.html">Contáctenos</a></li>
+          <li><a id="comodidades" href="auditorio.html">Auditorio</a></li>
+          <li><a id="explore" href="explore.html">Explore</a></li>
+      <!-- Dropdown Trigger -->
+         <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
+         <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones.html">Reserva</a></li>
+      </ul>
+  <br>
+
+      
+<!-- formulario -->
+<form action="#">
+    <p  id="orange"></p>
+  </form>
+  <!-- Create the form -->
+
+  <div class="row">
+      <div class="col s6">
+    <form id="event-form">
+      <h1>Seleccione el tipo de habitación</h1>
+        <form action="#">
+          <p  id="orange"></p>
+        </form>
+      <label for="nombre-input" id="nombre">Nombre Completo</label>
+      <input type="text" id="nombre-input" /><br />
+      <div class="col s6">
+            <label for="number-input" id="number">Teléfono</label>
+            <input type="email" id="number-input" /><br />
+      </div>
+      <div class="col s6">
+            <label for="email-input" id="email">Correo Electrónico</label>
+             <input type="number" id="email-input" /><br />
+      </div>
+      <div class="col s6">
+           <label for="start-date-input" id="checkin">Check In</label>
+           <input type="date" id="start-date-input" /><br />
+       </div>
+       <div class="col s6">
+          <label for="end-date-input" id="checkout">Check Out</label>
+          <input type="date" id="end-date-input" /><br />
+        </div>
+        <!-- seleccionar habitación -->
+  
+        <div class="col s6">
+          <p>
+          <label>
+            <input class="with-gap" name="group1" type="radio"  checked />
+            <span>Habitación Individual Economica</span>
+          </label>
+          </p>
+          <p>
+            <label>
+              <input class="with-gap" name="group1" type="radio" id="letra" />
+              <span>Habitación Matrimonial Economica</span>
+            </label>
+          </p>
+           <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio" id="letra"/>
+                <span>Habitación 2Camas Economica</span>
+              </label>
+            </p>
+        </div>
+        <!-- habitaciones superiores -->
+        <div class="col s6">
+        <p>
+          <label>
+            <input class="with-gap" name="group1" type="radio" id="letra"/>
+            <span>Habitación Individual Superior</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input class="with-gap" name="group1" type="radio" id="letra"/>
+            <span>Habitación Matrimonial Superior</span>
+          </label>
+        </p>
+          <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <span>Habitación 2Camas Superior</span>
+              </label>
+            </p>
+        </div>
+      <!-- termino de seleccion -->
+  
+      <!-- Button triggers new event to be added -->
+      <input id="add-event" class="btn btn-info" type="submit" value="Reserva" />
+    </form>
+    </div>
+  
+    <!-- termino de formulario -->
+  <!-- comienzo de texto -->
+    <div class="col s6">
+      <div><h3>Información Importante para su reserva</h3>
+          <form action="#">
+            <p  id="orange"></p>
+          </form>
+        <p>
+            	Le informamos que la hora de ingreso “Check In” es a las 13:00pm y Salida “Check Out” 12:30pm. <br>
+            	En el caso si requieran extender su estancia, éste tiene un costo adicional cuyo importe es de S/.40.00. <br>
+            	Para la confirmación de su reserva deberá realizar el pago de su primera noche.<br>
+            	Debe contactarnos a ventas@fatimacamilainn.com para enviarles nuestros datos de la empresa.<br>
+            	Contamos con pago Online a través de Visa Net.<br>
+            	Todas la reservaciones directas cuentan con taxi gratuito.<br>
+            	En las reservaciones grupales no aplica taxi gratuito.<br>
+            	Cuenta con una capacidad máxima de 43 personas.<br>
+            	Fátima Inn Hotel cuenta con:<br>
+            • 6 Habitaciones Individuales (Camas de 2 Plazas c/u). <br>
+            • 7 Habitaciones Matrimoniales (Camas de 2 Plazas c/u). <br>
+            •  2  Habitaciones Dobles ( De 2 Camas de 2 plazas c/u).<br>
+            •  2  Habitaciones Dobles (1 Cama de 2 Plazas y 1 Cama de 1 ½ Plaza).<br>
+            •  1  Habitación Triple (2 Camas de 2 Plazas c/u y 1 Cama de 1½ Plaza).<br>
+             Niños de 0 entre 10 años no paga alojamiento, solo extra S/.10 por desayuno.<br>
+             Para reservaciones que desean toda las habitaciones contamos con precios especiales, Llamenos +51 942889047.<br>
+            	Nos ubicamos en el centro de la ciudad, a 10 pasos de la Plaza de Armas de la Ciudad de Tarapoto.
+          </p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- termino de texto -->
+  
+
+
+
+
+
+
+
+      <!-- footer -->
+    <footer class="page-footer" id="footer">
+        <div class="footer-copyright">
+          <div class="container">
+              © 2019 Copyright by LoyDesign 
+          <a class="grey-text text-lighten-4 right" href="#!">
+              Jr. San Martín N° 127, Tarapoto | (51) 042 566 359 | +1 804 477 5524 | 942 889 047 | 986 585 921<br>
+              ventas@fatimacamilainn.com | @fatimainnhotel
+              </a>
+          </div>
+        </div>
+      </footer>
+  </div>  
+
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="javascript.js"></script>
+  
+</body>
+</html>
