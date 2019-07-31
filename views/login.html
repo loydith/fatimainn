@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>FatimaInn | Login</title>
+    <!-- materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            
+    <!-- style -->
+    <link rel="stylesheet" type="text/css "href="public/css/style.css">
+        
+</head>
+<body>
+<!-- INDEX -->
+        <div class="container">
+        <!-- Dropdown Structure  web-->
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="views/mediodia.html">Media día</a></li>
+           <li><a href="views/diacompleto.html">Día Completo</a></li>
+           <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
+          <li class="divider"></li>
+          <li><a id="salir" href="#!">Salir</a></li>
+        </ul>
+        <!-- Dropdown Structure  mobile-->
+        <ul id="dropdown2" class="dropdown-content">
+          <li><a href="views/mediodia.html">Media día</a></li>
+           <li><a href="views/diacompleto.html">Día Completo</a></li>
+           <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
+          <li class="divider"></li>
+          <li><a id="salir" href="#!">Salir</a></li>
+        </ul>
+        <!-- The new nav[ data-target ==> dropdown1] -->
+        <nav id="nav-head">
+          <div class="nav-wrapper">
+            <img src="public/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a id="inicio" href="views/index.html">Inicio</a></li>
+                 <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
+                 <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
+                 <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
+                 <li><a id="explore" href="views/login.html">Login</a></li>
+          <!-- Dropdown Trigger -->
+                <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
+                <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- data-target ==> dropdown2 -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a id="inicio" href="views/index.html">Inicio</a></li>
+            <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
+            <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
+            <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
+            <li><a id="explore" href="views/login.html">Login</a></li>
+        <!-- Dropdown Trigger -->
+           <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
+           <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
+        </ul>
+        <br>
+<!-- End navBar  -->
+<!-- Start Sign In -->
+<h1 class="text-center">Login</h1>
+
+<form class="mt-3">
+  <div style="display: none;" class="login-error">
+    <p style="font-weight: bold; color: red;">Incorrect Username or password. Try again.</p>
+  </div>
+  <div class="form-group">
+    <label for="username" id="usernameText">Username</label>
+    <input type="text" class="form-control" id="username"
+      placeholder="Enter username">
+  </div>
+  <div class="form-group">
+    <label for="pass" id="passText">Password</label>
+    <input type="password" class="form-control" id="pass" placeholder="Password">
+  </div>
+  
+  <div class="text-center">
+    <button type="submit" id="login" class="btn btn-danger">Submit</button>
+  </div>
+</form>
+
+
+<div class="row mt-4 justify-content-center">
+  <div class="co-md-12" id="loginText">
+    Don't have an account yet? <a href="/signup">Sign Up</a> here.
+  </div>
+</div>
+
+
+<!-- footer -->
+<footer class="page-footer" id="footer">
+        <div class="footer-copyright">
+          <div class="container center">
+          © 2019 Copyright by LoyDesign 
+          <a class="grey-text text-lighten-4 right" href="#!">
+            Jr. San Martín N° 127, Tarapoto | (51) 042 566 359 | +1 804 477 5524 | 942 889 047 | 986 585 921<br>
+            ventas@fatimacamilainn.com | @fatimainnhotel
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>  
+<!-- click button -->
+    <script>
+            $("#login").on("click", function (event) {
+              event.preventDefault();
+              var user = $("#username").val().trim();
+              var pass = $("#pass").val().trim();
+              $.ajax({
+                method: "POST",
+                url: "/login",
+                data: { username: user, password: pass }
+              }).then(function(data) {
+                if (!data) {
+                  //show error message - not a valid user
+                  $(".login-error").css("display", "block");
+                } else {
+                  window.location.replace("/dashboard");
+                }
+              })
+            });
+          </script>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="public/js/javascript.js"></script>
+  </body>
+</html>
