@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>index</title>
-    
-    <!-- bootstrap
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
    <!-- materialize -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css "href="style.css">
+    
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="javascript.js"></script>
+    
+  <!-- style -->
+    <link rel="stylesheet" type="text/css "href="public/css/style.css">
 
 </head>
 <body>
@@ -22,47 +21,47 @@
 <div class="container">
 <!-- Dropdown Structure  web-->
 <ul id="dropdown1" class="dropdown-content">
-  <li><a href="mediodia.html">Media día</a></li>
-   <li><a href="diacompleto.html">Día Completo</a></li>
-   <li><a href="paqueteturistico.html">Paquete Turístico</a></li>
+  <li><a href="views/mediodia.html">Media día</a></li>
+   <li><a href="views/diacompleto.html">Día Completo</a></li>
+   <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
   <li class="divider"></li>
   <li><a id="salir" href="#!">Salir</a></li>
 </ul>
 <!-- Dropdown Structure  mobile-->
 <ul id="dropdown2" class="dropdown-content">
-  <li><a href="mediodia.html">Media día</a></li>
-   <li><a href="diacompleto.html">Día Completo</a></li>
-   <li><a href="paqueteturistico.html">Paquete Turístico</a></li>
+  <li><a href="views/mediodia.html">Media día</a></li>
+   <li><a href="views/diacompleto.html">Día Completo</a></li>
+   <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
   <li class="divider"></li>
   <li><a id="salir" href="#!">Salir</a></li>
 </ul>
 <!-- The new nav[ data-target ==> dropdown1] -->
 <nav id="nav-head">
   <div class="nav-wrapper">
-    <img src="images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+    <img src="public/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-        <li><a id="inicio" href="index.html">Inicio</a></li>
-         <li><a id="habitaciones" href="habitaciones.html">Habitaciones</a></li>
-         <li><a id="contactos" href="contactos.html">Contáctenos</a></li>
-         <li><a id="auditorio" href="auditorio.html">Auditorio</a></li>
+        <li><a id="inicio" href="views/index.html">Inicio</a></li>
+         <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
+         <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
+         <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
          <!-- <li><a id="explore" href="explore.html">Explore</a></li> -->
   <!-- Dropdown Trigger -->
         <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
-        <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones.html">Reserva</a></li>
+        <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
     </ul>
   </div>
 </nav>
 <!-- data-target ==> dropdown2 -->
 <ul class="sidenav" id="mobile-demo">
-    <li><a id="inicio" href="index.html">Inicio</a></li>
-    <li><a id="habitaciones" href="habitaciones.html">Habitaciones</a></li>
-    <li><a id="contactos" href="contactos.html">Contáctenos</a></li>
-    <li><a id="auditorio" href="auditorio.html">Auditorio</a></li>
+    <li><a id="inicio" href="views/index.html">Inicio</a></li>
+    <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
+    <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
+    <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
     <!-- <li><a id="explore" href="explore.html">Explore</a></li> -->
 <!-- Dropdown Trigger -->
    <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
-   <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones.html">Reserva</a></li>
+   <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
 </ul>
 <br>
   
@@ -70,57 +69,57 @@
 <div class="slider">
   <ul class="slides">
     <li>
-          <img src="images/HMatrimonial2.JPG"> 
-    </li>
-    <!-- <li>
-      <img src="images/HIndividual1.jpg"> 
-    </li> -->
-    <li>
-        <img src="images/Hab2Camas2.JPG"> 
+          <img src="public/images/HMatrimonial2.JPG"> 
     </li>
     <li>
-      <img src="images/HIndividual2.jpg"> 
+      <img src="public/images/HIndividual1.jpg"> 
     </li>
     <li>
-        <img src="images/DesayunoCecina-FatimaInn.jpg"> 
+        <img src="public/images/Hab2Camas2.JPG"> 
     </li>
     <li>
-      <img src="images/HIndividual3.jpg"> 
+      <img src="public/images/HIndividual2.jpg"> 
     </li>
     <li>
-      <img src="images/HIndividual4.jpg"> 
+        <img src="public/images/DesayunoCecina-FatimaInn.jpg"> 
+    </li>
+    <li>
+      <img src="public/images/HIndividual3.jpg"> 
+    </li>
+    <li>
+      <img src="public/images/HIndividual4.jpg"> 
     </li>
     
     <li>
-      <img src="images/HMatrimonial3.JPG"> 
+      <img src="public/images/HMatrimonial3.JPG"> 
     </li>
     <li>
-      <img src="images/HMatrimonial4.JPG"> 
+      <img src="public/images/HMatrimonial4.JPG"> 
     </li>
     <li>
-      <img src="images/Hab2Camas1.JPG"> 
+      <img src="public/images/Hab2Camas1.JPG"> 
     <li>
     
     <li>
-        <img src="images/Restroom-HotelFatimaInn.jpg"> 
+        <img src="public/images/Restroom-HotelFatimaInn.jpg"> 
     </li>
     <li>
-        <img src="images/Restroom1-HotelFatimaInn.jpg"> 
+        <img src="public/images/Restroom1-HotelFatimaInn.jpg"> 
     </li>
     <li>
-        <img src="images/Reception-HotelFatimaInn9.jpg">
+        <img src="public/images/Reception-HotelFatimaInn9.jpg">
       </li>
     <li>
-        <img src="images/Reception-HotelFatimaInn.jpg"> 
+        <img src="public/images/Reception-HotelFatimaInn.jpg"> 
     </li>
     <li>
-        <img src="images/Reception-HotelFatimaInn2.jpg"> 
+        <img src="public/images/Reception-HotelFatimaInn2.jpg"> 
     </li>
     <li>
-        <img src="images/ComedorPrincipal-HotelFatimaInn1.jpg"> 
+        <img src="public/images/ComedorPrincipal-HotelFatimaInn1.jpg"> 
     </li>
     <li>
-        <img src="images/ComedorPrincipal-HotelFatimaInn2.jpg"> 
+        <img src="public/images/ComedorPrincipal-HotelFatimaInn2.jpg"> 
     </li>
   </ul>
 </div>
@@ -132,7 +131,7 @@
     <div id = "hotel-results">
     <div class="card horizontal" id="orange">
       <div class="card-image">
-        <img src="images/HMatrimonial3.JPG">
+        <img src="public/images/HMatrimonial3.JPG">
       </div>
       <div class="card-stacked">
         <div class="card-content">
@@ -143,7 +142,7 @@
             </p>
         </div>
         <div class="card-action">
-          <a href="habitaciones.html">Más</a>
+          <a href="views/habitaciones.html">Más</a>
         </div>
       </div>
     </div>
@@ -155,7 +154,7 @@
     <div id="events-results">
     <div class="card horizontal" id="orange">
       <div class="card-image">
-        <img src="images/Picture1.png" height="180">
+        <img src="public/images/Picture1.png" height="180">
       </div>
       <div class="card-stacked">
         <div class="card-content">
@@ -166,8 +165,9 @@
               con total seguridad.</p>
         </div>
         <div class="card-action">
-          <a href="habitaciones.html"></a>
+          <a href="views/habitaciones.html"></a>
         </div>
+        
       </div>
     </div>
   </div>
@@ -181,7 +181,7 @@
     <div id = "hotel-results">
     <div class="card horizontal" id="orange">
       <div class="card-image">
-        <img src="images/Reception-HotelFatimaInn2.jpg">
+        <img src="public/images/Reception-HotelFatimaInn2.jpg">
       </div>
       <div class="card-stacked">
         <div class="card-content">
@@ -192,7 +192,7 @@
            dar un buen servicio y hacer que los huéspedes se sientan como en casa.</p>
         </div>
         <div class="card-action">
-          <a href="habitaciones.html"></a>
+          <a href="views/habitaciones.html"></a>
         </div>
       </div>
     </div>
@@ -204,7 +204,7 @@
     <div id="events-results">
     <div class="card horizontal" id="orange">
       <div class="card-image">
-        <img src="images/Auditorio2-FatimaInnHotel.jpg">
+        <img src="public/images/Auditorio2-FatimaInnHotel.jpg">
       </div>
       <div class="card-stacked">
         <div class="card-content">
@@ -216,7 +216,7 @@
               </p>
         </div>
         <div class="card-action">
-          <a href="habitaciones.html">Más</a>
+          <a href="views/habitaciones.html">Más</a>
         </div>
       </div>
     </div>
@@ -239,6 +239,8 @@
       </footer>
     </div>  
 
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</body>
+    <script src="public/js/javascript.js"></script>
+  </body>
 </html>

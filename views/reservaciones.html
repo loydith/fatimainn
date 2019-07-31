@@ -15,53 +15,53 @@
 </head>
 <body>
     <!-- Reservaciones -->
-<div class="container">
-      <!-- Dropdown Structure  web-->
-      <ul id="dropdown1" class="dropdown-content">
-        <li><a href="mediodia.html">Media día</a></li>
-         <li><a href="diacompleto.html">Día Completo</a></li>
-         <li><a href="paqueteturistico.html">Paquete Turístico</a></li>
-        <li class="divider"></li>
-        <li><a id="salir" href="#!">Salir</a></li>
-      </ul>
-      <!-- Dropdown Structure  mobile-->
-      <ul id="dropdown2" class="dropdown-content">
-        <li><a href="mediodia.html">Media día</a></li>
-         <li><a href="diacompleto.html">Día Completo</a></li>
-         <li><a href="paqueteturistico.html">Paquete Turístico</a></li>
-        <li class="divider"></li>
-        <li><a id="salir" href="#!">Salir</a></li>
-      </ul>
-      <!-- The new nav -->
-      <nav id="nav-head">
-        <div class="nav-wrapper">
-            <img src="images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+    <div class="container">
+        <!-- Dropdown Structure  web-->
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="views/mediodia.html">Media día</a></li>
+           <li><a href="views/diacompleto.html">Día Completo</a></li>
+           <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
+          <li class="divider"></li>
+          <li><a id="salir" href="#!">Salir</a></li>
+        </ul>
+        <!-- Dropdown Structure  mobile-->
+        <ul id="dropdown2" class="dropdown-content">
+          <li><a href="views/mediodia.html">Media día</a></li>
+           <li><a href="views/diacompleto.html">Día Completo</a></li>
+           <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
+          <li class="divider"></li>
+          <li><a id="salir" href="#!">Salir</a></li>
+        </ul>
+        <!-- The new nav[ data-target ==> dropdown1] -->
+        <nav id="nav-head">
+          <div class="nav-wrapper">
+            <img src="public/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-              <li><a id="inicio" href="index.html">Inicio</a></li>
-               <li><a id="habitaciones" href="habitaciones.html">Habitaciones</a></li>
-               <li><a id="contactos" href="contactos.html">Contáctenos</a></li>
-               <li><a id="comodidades" href="auditorio.html">Auditorio</a></li>
-               <!-- <li><a id="explore" href="explore.html">Explore</a></li> -->
+            <ul class="right hide-on-med-and-down">
+                <li><a id="inicio" href="views/index.html">Inicio</a></li>
+                 <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
+                 <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
+                 <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
+                 <!-- <li><a id="explore" href="explore.html">Explore</a></li> -->
+          <!-- Dropdown Trigger -->
+                <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
+                <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- data-target ==> dropdown2 -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a id="inicio" href="views/index.html">Inicio</a></li>
+            <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
+            <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
+            <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
+            <!-- <li><a id="explore" href="explore.html">Explore</a></li> -->
         <!-- Dropdown Trigger -->
-              <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
-              <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones.html">Reserva</a></li>
-          </ul>
-        </div>
-      </nav>
-      
-      <ul class="sidenav" id="mobile-demo">
-          <li><a id="inicio" href="index.html">Inicio</a></li>
-          <li><a id="habitaciones" href="habitaciones.html">Habitaciones</a></li>
-          <li><a id="contactos" href="contactos.html">Contáctenos</a></li>
-          <li><a id="comodidades" href="auditorio.html">Auditorio</a></li>
-          <li><a id="explore" href="explore.html">Explore</a></li>
-      <!-- Dropdown Trigger -->
-         <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
-         <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones.html">Reserva</a></li>
-      </ul>
-  <br>
-      
+           <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
+           <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
+        </ul>
+        <br>
+              
 <!-- formulario -->
 <form action="#">
     <p  id="orange"></p>
@@ -71,7 +71,7 @@
       <div class="col s6" id="contactanos">
   <!-- formulario -->
     <form>
-      <label for="nombre-input" id="nombre"><i class="fas fa-user"></i>Nombre Completo</label>
+      <label for="nombre-input" id="re-nome"><i class="fas fa-user"></i>Nombre Completo</label>
       <input type="text" id="nombre-input" /><br />
       <div class="col s6">
             <label for="number-input" id="number"><i class="fas fa-phone"></i>Teléfono</label>
@@ -156,7 +156,7 @@
   <!-- links for phone -->
   <div class="col s6">
         <div class="card blue-light darken-1" id="card">
-            <h4 class="card-title"><img src="RedesSociales/phone.png" width="30px" alt="30px">Contactos</h4>
+            <h4 class="card-title"><img src="public/RedesSociales/phone.png" width="30px" alt="30px">Contactos</h4>
             <p>
               +(51) 042 566 359 <br>
               +(51) 942 889 047 <br>
@@ -237,7 +237,7 @@
   </script>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="javascript.js"></script>
+    <script src="public/js/javascript.js"></script>
     <!-- React script tags-->
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>

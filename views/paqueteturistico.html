@@ -5,108 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Paquete Turistico</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css "href="style.css">
+    <!-- style -->
+    <link rel="stylesheet" type="text/css "href="public/css/style.css">
 </head>
 <body>
-    <!-- Paquete Turistico -->
-    <div class="container">
-      <!-- Dropdown Structure  web-->
-      <ul id="dropdown1" class="dropdown-content">
-        <li><a href="mediodia.html">Media día</a></li>
-         <li><a href="diacompleto.html">Día Completo</a></li>
-         <li><a href="paqueteturistico.html">Paquete Turístico</a></li>
-        <li class="divider"></li>
-        <li><a id="salir" href="#!">Salir</a></li>
+   <!-- Paquete Turistico -->
+   
+<div class="container">
+  <!-- Dropdown Structure  web-->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="views/mediodia.html">Media día</a></li>
+     <li><a href="views/diacompleto.html">Día Completo</a></li>
+     <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
+    <li class="divider"></li>
+    <li><a id="salir" href="#!">Salir</a></li>
+  </ul>
+  <!-- Dropdown Structure  mobile-->
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="views/mediodia.html">Media día</a></li>
+     <li><a href="views/diacompleto.html">Día Completo</a></li>
+     <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
+    <li class="divider"></li>
+    <li><a id="salir" href="#!">Salir</a></li>
+  </ul>
+  <!-- The new nav[ data-target ==> dropdown1] -->
+  <nav id="nav-head">
+    <div class="nav-wrapper">
+      <img src="public/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+          <li><a id="inicio" href="views/index.html">Inicio</a></li>
+           <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
+           <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
+           <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
+           <!-- <li><a id="explore" href="explore.html">Explore</a></li> -->
+    <!-- Dropdown Trigger -->
+          <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
+          <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
       </ul>
-      <!-- Dropdown Structure  mobile-->
-      <ul id="dropdown2" class="dropdown-content">
-        <li><a href="mediodia.html">Media día</a></li>
-         <li><a href="diacompleto.html">Día Completo</a></li>
-         <li><a href="paqueteturistico.html">Paquete Turístico</a></li>
-        <li class="divider"></li>
-        <li><a id="salir" href="#!">Salir</a></li>
-      </ul>
-      <!-- The new nav -->
-      <nav id="nav-head">
-        <div class="nav-wrapper">
-            <img src="images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-              <li><a id="inicio" href="index.html">Inicio</a></li>
-               <li><a id="habitaciones" href="habitaciones.html">Habitaciones</a></li>
-               <li><a id="contactos" href="contactos.html">Contáctenos</a></li>
-               <li><a id="comodidades" href="auditorio.html">Auditorio</a></li>
-               <li><a id="explore" href="explore.html">Explore</a></li>
-        <!-- Dropdown Trigger -->
-              <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
-              <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones.html">Reserva</a></li>
-          </ul>
-        </div>
-      </nav>
-      
-      <ul class="sidenav" id="mobile-demo">
-          <li><a id="inicio" href="index.html">Inicio</a></li>
-          <li><a id="habitaciones" href="habitaciones.html">Habitaciones</a></li>
-          <li><a id="contactos" href="contactos.html">Contáctenos</a></li>
-          <li><a id="comodidades" href="auditorio.html">Auditorio</a></li>
-          <!-- <li><a id="explore" href="explore.html">Explore</a></li> -->
-      <!-- Dropdown Trigger -->
-         <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
-         <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones.html">Reserva</a></li>
-      </ul>      
+    </div>
+  </nav>
+  <!-- data-target ==> dropdown2 -->
+  <ul class="sidenav" id="mobile-demo">
+      <li><a id="inicio" href="views/index.html">Inicio</a></li>
+      <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
+      <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
+      <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
+      <!-- <li><a id="explore" href="explore.html">Explore</a></li> -->
+  <!-- Dropdown Trigger -->
+     <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
+     <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
+  </ul>
   <br>
+    
+  
 
       <!-- Slider Images -->
 <div class="slider">
     <ul class="slides">
       <li>
-        <img src="images/lamas-tarapoto-peru-2-800x600.jpg">
+        <img src="public/images/lamas-tarapoto-peru-2-800x600.jpg">
       </li>
       <li>
-        <img src="images/cataratas-de-Ahuashiyacu.jpg"> 
+        <img src="public/images/cataratas-de-Ahuashiyacu.jpg"> 
       </li>
       <li>
-        <img src="images/moyobamba.jpg"> 
+        <img src="public/images/moyobamba.jpg"> 
       </li>
       <li>
-        <img src="images/balsa.jpg"> 
+        <img src="public/images/balsa.jpg"> 
       </li>
       <li>
-        <img src="images/banostermales.jpg"> 
+        <img src="public/images/banostermales.jpg"> 
       </li>
       <li>
-        <img src="images/alto-mayo-moyobamba-rioja-tarapoto-peru-1-800x600.jpg"> 
+        <img src="public/images/alto-mayo-moyobamba-rioja-tarapoto-peru-1-800x600.jpg"> 
       </li>
       <li>
-        <img src="images/laguna-azul.jpg"> 
+        <img src="public/images/laguna-azul.jpg"> 
       </li>
       <li>
-        <img src="images/loro.jpg"> 
+        <img src="public/images/loro.jpg"> 
       </li>
       <li>
-        <img src="images/Castillo-in-Lamas-Peru.jpg"> 
+        <img src="public/images/Castillo-in-Lamas-Peru.jpg"> 
       <li>
       <li>
-          <img src="images/Lamas3.jpg"> 
+          <img src="public/images/Lamas3.jpg"> 
       </li>
       <li>
-          <img src="images/lamas-tarapoto-peru-2-800x600.jpg"> 
+          <img src="public/images/lamas-tarapoto-peru-2-800x600.jpg"> 
       </li>
       <li>
-          <img src="images/paseocaballo.jpg"> 
+          <img src="public/images/paseocaballo.jpg"> 
       </li>
       <li>
-          <img src="images/pishurayacu-galeria3.jpg"> 
+          <img src="public/images/pishurayacu-galeria3.jpg"> 
       </li>
       <li>
-          <img src="images/pishurayacu-galeria4.jpg"> 
+          <img src="public/images/pishurayacu-galeria4.jpg"> 
       </li>
       <li>
-          <img src="images/cataratas.jpg"> 
+          <img src="public/images/cataratas.jpg"> 
       </li>
       <li>
-          <img src="images/Tours-en-Tarapoto-Lamas-Ahuashiyacu-Altomayo-7-900x500.jpg"> 
+          <img src="public/images/Tours-en-Tarapoto-Lamas-Ahuashiyacu-Altomayo-7-900x500.jpg"> 
       </li>
     </ul>
   </div>
@@ -130,7 +135,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="javascript.js"></script>
+    <script src="public/js/javascript.js"></script>
   
 </body>
 </html>
