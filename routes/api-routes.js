@@ -17,7 +17,7 @@ module.exports = function(app) {
   // create user from sign up form
   app.post("/api/users", function (req, res) {
     var user = req.body.username;
-    var pass = req.body.pass;
+    var pass = req.body.password;
     db.User.create({
       username: user,
       password: pass

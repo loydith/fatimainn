@@ -19,18 +19,18 @@ module.exports = function(app) {
     console.log(req.session.loggedin);
     console.log(req.session.userId);
 
-    // find user's brackets
+    // find user's reservation
     db.Reservation.findAll({
       where: {
         UserId: req.session.userId
       }
     }).then(function (dbResponse) {
       res.render("dashboard", {
-        // pass in loggedin state, userid, username, and brackets
+        // pass in loggedin state, userid, username, and reservations
         loggedin: req.session.loggedin,
         userId: req.session.userId,
         username: req.session.username,
-        brackets: dbResponse
+        Reservation: dbResponse
       });
     });
   });
