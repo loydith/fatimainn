@@ -26,19 +26,37 @@ res.json({ message: 'Message received!!!'})
 });
 
 // pages
-
-
 app.get('/', (req, res) =>{
-    res.sendFile(path.join(__dirname, 'views'));
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
-app.get('/', (req, res) =>{
+app.get('/auditorio', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'views', 'auditorio.html'));
+});
+app.get('/contactos', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'contactos.html'));
 });
-app.get('/', (req, res) =>{
+app.get('/diacompleto', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'diacompleto.html'));
 });
-app.get('/', (req, res) =>{
+app.get('/habitaciones', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'habitaciones.html'));
+});
+app.get('/mediodia', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'views', 'mediodia.html'));
+});
+
+app.get('/paqueteturistico', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'views', 'paquteturistico.html'));
+});
+
+app.get('/reservaciones', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'views', 'reservaciones.html'));
+});
+app.get('/login', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'views', 'login.html'));
+});
+app.get('/signup', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'views', 'signup.html'));
 });
 
 

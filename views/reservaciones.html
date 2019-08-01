@@ -11,24 +11,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css "href="style.css">
+    <!-- style -->
+    <link rel="stylesheet" type="text/css "href="public/css/style.css">
 </head>
 <body>
     <!-- Reservaciones -->
     <div class="container">
         <!-- Dropdown Structure  web-->
         <ul id="dropdown1" class="dropdown-content">
-          <li><a href="views/mediodia.html">Media día</a></li>
-           <li><a href="views/diacompleto.html">Día Completo</a></li>
-           <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
+          <li><a href="/mediodia">Media día</a></li>
+           <li><a href="/diacompleto">Día Completo</a></li>
+           <li><a href="/paqueteturistico">Paquete Turístico</a></li>
           <li class="divider"></li>
           <li><a id="salir" href="#!">Salir</a></li>
         </ul>
         <!-- Dropdown Structure  mobile-->
         <ul id="dropdown2" class="dropdown-content">
-          <li><a href="views/mediodia.html">Media día</a></li>
-           <li><a href="views/diacompleto.html">Día Completo</a></li>
-           <li><a href="views/paqueteturistico.html">Paquete Turístico</a></li>
+          <li><a href="/mediodia">Media día</a></li>
+           <li><a href="/diacompleto">Día Completo</a></li>
+           <li><a href="/paqueteturistico">Paquete Turístico</a></li>
           <li class="divider"></li>
           <li><a id="salir" href="#!">Salir</a></li>
         </ul>
@@ -38,29 +39,29 @@
             <img src="public/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a id="inicio" href="views/index.html">Inicio</a></li>
-                 <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
-                 <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
-                 <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
-                 <li><a id="explore" href="views/login.html">Login</a></li>
-                 <li><a id="explore" href="views/singup.html">Sing Up</a></li>
+                <li><a id="inicio" href="/index">Inicio</a></li>
+                 <li><a id="habitaciones" href="/habitaciones">Habitaciones</a></li>
+                 <li><a id="contactos" href="/contactos">Contáctenos</a></li>
+                 <li><a id="auditorio" href="/auditorio">Auditorio</a></li>
+                 <li><a id="explore" href="/login">Login</a></li>
+                 <li><a id="explore" href="/signup">Sign Up</a></li>
           <!-- Dropdown Trigger -->
                 <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
-                <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
+                <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
             </ul>
           </div>
         </nav>
         <!-- data-target ==> dropdown2 -->
         <ul class="sidenav" id="mobile-demo">
-            <li><a id="inicio" href="views/index.html">Inicio</a></li>
-            <li><a id="habitaciones" href="views/habitaciones.html">Habitaciones</a></li>
-            <li><a id="contactos" href="views/contactos.html">Contáctenos</a></li>
-            <li><a id="auditorio" href="views/auditorio.html">Auditorio</a></li>
-            <li><a id="explore" href="views/login.html">Login</a></li>
-         <li><a id="explore" href="views/singup.html">Sing Up</a></li>
+            <li><a id="inicio" href="/index">Inicio</a></li>
+            <li><a id="habitaciones" href="/habitaciones">Habitaciones</a></li>
+            <li><a id="contactos" href="/contactos">Contáctenos</a></li>
+            <li><a id="auditorio" href="/auditorio">Auditorio</a></li>
+            <li><a id="explore" href="/login">Login</a></li>
+         <li><a id="explore" href="/signup">Sign Up</a></li>
         <!-- Dropdown Trigger -->
            <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
-           <li><a id="reservaciones" class="waves-effect waves-light btn" href="views/reservaciones.html">Reserva</a></li>
+           <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
         </ul>
         <br>
               
@@ -174,10 +175,10 @@
         <h4 class="card-title">Redes Sociales</h4>
         <p>
           <a href="mailto:loydith@gmail.com">ventas@fatimacamilainn.com</a><br><br>
-          <a href="mailto:loydith@gmail.com"><img src="RedesSociales/email.png" width="30px" alt="30px"></a>
-          <a href="https://www.facebook.com/fatimainnhotel"><img src="RedesSociales/facebook.png" width="30px" alt="30px"></a>
-          <a href="https://www.linkedin.com/company/fatimainn/?viewAsMember=true"><img src="RedesSociales/in.png" width="30px" alt="30px"></a>
-          <a href="https://twitter.com/fatimainnhotel"><img src="RedesSociales/twitter.png" width="30px" alt="30px"></a>
+          <a href="mailto:loydith@gmail.com"><img src="../RedesSociales/email.png" width="30px" alt="30px"></a>
+          <a href="https://www.facebook.com/fatimainnhotel"><img src="../RedesSociales/facebook.png" width="30px" alt="30px"></a>
+          <a href="https://www.linkedin.com/company/fatimainn/?viewAsMember=true"><img src="../RedesSociales/in.png" width="30px" alt="30px"></a>
+          <a href="https://twitter.com/fatimainnhotel"><img src="../RedesSociales/twitter.png" width="30px" alt="30px"></a>
           <a href="https://www.instagram.com/hotelfatimainn/"><img src="RedesSociales/instagram.png" width="30px" alt="30px"></a>
         </p> 
     </div>
@@ -240,6 +241,7 @@
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="public/js/javascript.js"></script>
+
     <!-- React script tags-->
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
