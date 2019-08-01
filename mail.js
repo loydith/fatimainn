@@ -4,12 +4,12 @@ const transporter = nodemailer.createTransport(mailGun(auth));
 
 const auth ={
     auth: {
-        api_Key: '39dbca1c047539a821d8993a40bcfb26-f877bd7a-82eb4234',
-        domain: 'sandbox694320186e654897af66ab7bdba8246f.mailgun.org'
+        api_Key: '',
+        domain: ''
     }
 };
 const mailOptions = {
-    from: 'brad@sandbox694320186e654897af66ab7bdba8246f.mailgun.org', // sender address
+    from: '', // sender address
     to: "", // list of receivers
     cc: "",
     subject: "Contact Form", // Subject line
