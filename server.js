@@ -1,6 +1,7 @@
 // require("dotenv").config();
 const express = require ('express');
 const nodemailer = require('nodemailer');
+// const session = require("express-session");
 const path = require('path');
 const app = express();
 
@@ -22,6 +23,9 @@ res.json({ message: 'Message received!!!'})
 
 // pages
 app.get('/', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
+app.get('/index', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 app.get('/auditorio', (req, res) =>{
@@ -56,6 +60,10 @@ app.get('/signup', (req, res) =>{
 
 // bring in the models
 var db = require("./models");
+
+// Routes
+require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
 
 // listen on port 3000
 var PORT = process.env.PORT || 3000;
