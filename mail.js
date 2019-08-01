@@ -9,7 +9,7 @@ const auth ={
     }
 };
 const mailOptions = {
-    from: ' brad@sandbox694320186e654897af66ab7bdba8246f.mailgun.org', // sender address
+    from: 'brad@sandbox694320186e654897af66ab7bdba8246f.mailgun.org', // sender address
     to: "loydith@gmail.com", // list of receivers
     cc: "",
     subject: "Contact Form", // Subject line

@@ -1,20 +1,15 @@
-
-// chunck => 1
+// require("dotenv").config();
 const express = require ('express');
-// const nodemailer = require('nodemailer');
-// const bodyParser = require("body-parser");
+const nodemailer = require('nodemailer');
 const path = require('path');
-
-const log = console.log;
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // Satitic folder
 app.use('/public', express.static(path.join(__dirname, 'public')));
-// app.use(express.static(path.join(__dirname + "/view")));
-// app.get(express.static("view"));
 
-//chunk => 2
+// Use morgan logger for logging requests
+// app.use(logger("dev"));
+
 //data parsing
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -59,5 +54,14 @@ app.get('/signup', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'signup.html'));
 });
 
+// bring in the models
+var db = require("./models");
 
-app.listen(PORT, () => log('Server is starting on PORT, ', 3000));
+// listen on port 3000
+var PORT = process.env.PORT || 3000;
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
+// app.listen(PORT, () => log('Server is starting on PORT, ', 3000));

@@ -18,7 +18,11 @@
   "homepage": "https://github.com/loydith/fatimainn#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.5",
     "nodemailer": "^6.3.0",
-    "nodemailer-mailgun-transport": "^1.4.0"
+    "nodemailer-mailgun-transport": "^1.4.0",
+    "sequelize": "^5.12.2"
   }
 }
