@@ -34,33 +34,33 @@ module.exports = function(app) {
   });
 
   // check user's login attempt from login form
-  app.post("/login", function (req, res) {
-    var user = req.body.username;
-    var pass = req.body.pass;
-    db.User.findAll({
-      where: {
-        username: user,
-        password: pass
-      }
-    }).then(function (dbResponse) {
+  // app.post("/login", function (req, res) {
+  //   var user = req.body.username;
+  //   var pass = req.body.pass;
+  //   db.User.findAll({
+  //     where: {
+  //       username: user,
+  //       password: pass
+  //     }
+  //   }).then(function (dbResponse) {
       // console.log(dbResponse);
       // console.log(dbResponse[0].id);
-      if (dbResponse.length === 0) {
-        console.log("no user with those credentials");
-        res.json(false);
-      } else {
-        console.log("user found");
-        // set the session loggedin state and userId
-        req.session.loggedin = true;
-        req.session.userId = dbResponse[0].id;
-        req.session.username = dbResponse[0].username;
-        console.log(req.session.loggedin);
-        console.log(req.session.userId);
-        res.redirect("/dashboard");
+      // if (dbResponse.length === 0) {
+      //   console.log("no user with those credentials");
+      //   res.json(false);
+      // } else {
+        // console.log("user found");
+        // // set the session loggedin state and userId
+        // req.session.loggedin = true;
+        // req.session.userId = dbResponse[0].id;
+        // req.session.username = dbResponse[0].username;
+        // console.log(req.session.loggedin);
+        // console.log(req.session.userId);
+        // res.redirect("/dashboard");
         // res.json(true);
-      }
-    });
-  });
+  //     }
+  //   });
+  // });
 
   // logout
   app.get("/logout", function(req, res) {
@@ -73,16 +73,27 @@ module.exports = function(app) {
   // create new reservation
   app.post("/api/reservation", function(req, res) {
     var userId = req.session.userId;
-    var bracketName = req.body.name;
-    var teamNames = JSON.parse(req.body.teamNames);
+    var first_name = req.body.name;
 
-    db.Bracket.create({
-      bracket_name: bracketName,
-      teamNames: teamNames,
+    var teamNames = JSON.parse(req.body);
+
+    db.Reservation.create({
+      first_name: firstName,
+      lastNames: lastNames,
       UserId: userId
     }).then(function(dbResponse) {
-      // display that bracket page
+      // display that reservation page
       res.json(dbResponse.dataValues.id);
     });
   });
 };
+// id int NOT NULL AUTO_INCREMENT,
+//    first_name varchar(100) NOT NULL,
+//    last_name varchar(200) NOT NULL,
+//    email varchar(50) NOT NULL,
+//    phone varchar(12) NOT Null,
+//    room_type varchar(100) NOT Null,
+//    room_qty integer(17) NOT Null,
+//    cr_qty integer(2) NOT Null,
+//    message varchar(500) NOT NULL,
+//    PRIMARY KEY (id)

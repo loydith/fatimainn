@@ -16,22 +16,17 @@ module.exports = function(app) {
 
   // after user logs in, show their dashboard
   app.get("/dashboard", function(req, res) {
-    console.log(req.session.loggedin);
-    console.log(req.session.userId);
+    // console.log(req.session.loggedin);
+    // console.log(req.session.userId);
 
     // find user's reservation
-    db.Reservation.findAll({
-      where: {
-        UserId: req.session.userId
-      }
+    
+      
     }).then(function (dbResponse) {
       res.render("dashboard", {
         // pass in loggedin state, userid, username, and reservations
-        loggedin: req.session.loggedin,
-        userId: req.session.userId,
-        username: req.session.username,
-        Reservation: dbResponse
-      });
+        
+      
     });
   });
 
@@ -45,10 +40,7 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     if (req.session.loggedin) {
       res.render("404", {
-        // pass in loggedin state, userid, username, and brackets
-        loggedin: req.session.loggedin,
-        userId: req.session.userId,
-        username: req.session.username
+        
       });
     } else {
       // if not logged in, prompt them to login (or sign up)

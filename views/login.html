@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
   <!-- style -->
-    <link rel="stylesheet" type="text/css "href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 
 </head>
 <body>
@@ -38,7 +38,7 @@
 <!-- The new nav[ data-target ==> dropdown1] -->
 <nav id="nav-head">
   <div class="nav-wrapper">
-    <img src="public/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+    <img src="/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
         <li><a id="inicio" href="/index">Inicio</a></li>
@@ -125,13 +125,13 @@
                   //show error message - not a valid user
                   $(".login-error").css("display", "block");
                 } else {
-                  window.location.replace("/dashboard");
+                  alert(data.message)
                 }
               })
             });
           </script>
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="public/js/javascript.js"></script>
+    <script src="/js/javascript.js"></script>
   </body>
 </html>

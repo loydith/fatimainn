@@ -1,25 +1,39 @@
 // require("dotenv").config();
 const express = require ('express');
 const nodemailer = require('nodemailer');
-// const session = require("express-session");
+const sendMail = require ('./mail');
+const session = require("express-session");
 const path = require('path');
 const app = express();
 
 // Satitic folder
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-// Use morgan logger for logging requests
-// app.use(logger("dev"));
-
 //data parsing
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
+// email, subject, text
 app.post('/email', (req, res) => {
 //send email here
+
+const {email, subject, text} = req.body;
 console.log('Data: ', req.body);
-res.json({ message: 'Message received!!!'})
+sendMail(email, subject, text, function(err, data){
+    if(err){
+        res.status(500).json({ message: 'Internal Error'});
+    }else {
+        res.json({message: 'Email sent!!!'});
+    }
 });
+});
+// login
+app.post('/login', (req, res)=>{
+console.log(req.body);
+    res.status(200).json({message: 'Logged In'})
+});
+
+
 
 // pages
 app.get('/', (req, res) =>{
@@ -72,4 +86,4 @@ db.sequelize.sync().then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
-// app.listen(PORT, () => log('Server is starting on PORT, ', 3000));
+
