@@ -14,21 +14,20 @@ module.exports = function(app) {
     res.render("signup");
   });
 
-  // after user logs in, show their dashboard
-  app.get("/dashboard", function(req, res) {
-    // console.log(req.session.loggedin);
-    // console.log(req.session.userId);
+  // // after user logs in, show their dashboard
+  // app.get("/dashboard", function(req, res) {
+  //   // console.log(req.session.loggedin);
+  //   // console.log(req.session.userId);
 
-    // find user's reservation
+  //   // find user's reservation
     
       
-    }).then(function (dbResponse) {
-      res.render("dashboard", {
-        // pass in loggedin state, userid, username, and reservations
+  //   }).then(function (dbResponse) {
+  //     res.render("dashboard", {
+  //       // pass in loggedin state, userid, username, and reservations
         
       
-    });
-  });
+  //   });
 
   
   // create a bracket
@@ -37,14 +36,14 @@ module.exports = function(app) {
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    if (req.session.loggedin) {
-      res.render("404", {
+  // app.get("*", function(req, res) {
+  //   if (req.session.loggedin) {
+  //     res.render("404", {
         
-      });
-    } else {
-      // if not logged in, prompt them to login (or sign up)
-      res.render("404");
-    }
-  });
+  //     });
+  //   } else {
+  //     // if not logged in, prompt them to login (or sign up)
+  //     res.render("404");
+  //   }
+  // });
 };

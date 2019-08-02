@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 // Satitic folder
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //data parsing
 app.use(express.urlencoded({extended: false}));
