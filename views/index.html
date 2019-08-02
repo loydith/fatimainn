@@ -8,8 +8,8 @@
    <!-- materialize -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
   <!-- style -->
@@ -18,7 +18,7 @@
 </head>
 <body>
 <!-- INDEX -->
-<div class="container">
+<!-- <div class="container"> -->
 <!-- Dropdown Structure  web-->
 <ul id="dropdown1" class="dropdown-content">
   <li><a href="/mediodia">Media día</a></li>
@@ -38,7 +38,7 @@
 <!-- The new nav[ data-target ==> dropdown1] -->
 <nav id="nav-head">
   <div class="nav-wrapper">
-    <img src="public/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+    <img src="public/images/Logo-FatimaInn.png" height="80" class="brand-logo">
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
         <li><a id="inicio" href="/index">Inicio</a></li>
@@ -65,70 +65,71 @@
    <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
    <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
 </ul>
-<br>
+<!-- <br> -->
   
     <!-- Slider Images -->
+<div class="container">
 <div class="slider">
   <ul class="slides">
     <li>
-          <img src="public/images/HMatrimonial2.JPG"> 
+      <img src="public/images/HMatrimonial2.JPG" id="slider-img"> 
     </li>
     <li>
-      <img src="public/images/HIndividual1.jpg"> 
+      <img src="public/images/HIndividual1.jpg" id="slider-img"> 
     </li>
     <li>
-        <img src="public/images/Hab2Camas2.JPG"> 
+        <img src="public/images/Hab2Camas2.JPG" id="slider-img"> 
     </li>
     <li>
-      <img src="public/images/HIndividual2.jpg"> 
+      <img src="public/images/HIndividual2.jpg" id="slider-img"> 
     </li>
     <li>
-        <img src="public/images/DesayunoCecina-FatimaInn.jpg"> 
+        <img src="public/images/DesayunoCecina-FatimaInn.jpg" id="slider-img"> 
     </li>
     <li>
-      <img src="public/images/HIndividual3.jpg"> 
+      <img src="public/images/HIndividual3.jpg" id="slider-img"> 
     </li>
     <li>
-      <img src="public/images/HIndividual4.jpg"> 
+      <img src="public/images/HIndividual4.jpg" id="slider-img"> 
     </li>
     
     <li>
-      <img src="public/images/HMatrimonial3.JPG"> 
+      <img src="public/images/HMatrimonial3.JPG" id="slider-img"> 
     </li>
     <li>
-      <img src="public/images/HMatrimonial4.JPG"> 
+      <img src="public/images/HMatrimonial4.JPG" id="slider-img"> 
     </li>
     <li>
-      <img src="public/images/Hab2Camas1.JPG"> 
+      <img src="public/images/Hab2Camas1.JPG" id="slider-img"> 
     <li>
     
     <li>
-        <img src="public/images/Restroom-HotelFatimaInn.jpg"> 
+        <img src="public/images/Restroom-HotelFatimaInn.jpg" id="slider-img"> 
     </li>
     <li>
-        <img src="public/images/Restroom1-HotelFatimaInn.jpg"> 
+        <img src="public/images/Restroom1-HotelFatimaInn.jpg" id="slider-img"> 
     </li>
     <li>
-        <img src="public/images/Reception-HotelFatimaInn9.jpg">
+        <img src="public/images/Reception-HotelFatimaInn9.jpg" id="slider-img">
       </li>
     <li>
-        <img src="public/images/Reception-HotelFatimaInn.jpg"> 
+        <img src="public/images/Reception-HotelFatimaInn.jpg" id="slider-img"> 
     </li>
     <li>
-        <img src="public/images/Reception-HotelFatimaInn2.jpg"> 
+        <img src="public/images/Reception-HotelFatimaInn2.jpg" id="slider-img"> 
     </li>
     <li>
-        <img src="public/images/ComedorPrincipal-HotelFatimaInn1.jpg"> 
+        <img src="public/images/ComedorPrincipal-HotelFatimaInn1.jpg" id="slider-img"> 
     </li>
     <li>
-        <img src="public/images/ComedorPrincipal-HotelFatimaInn2.jpg"> 
+        <img src="public/images/ComedorPrincipal-HotelFatimaInn2.jpg" id="slider-img"> 
     </li>
   </ul>
 </div>
 
 <!--create cards left 1-->
 <div class="row">
-  <div class="col s6" id = "right">
+  <div class="col s6 m6" id = "right">
     <h3 class="header">Habitaciones y Precios</h3>
     <div id = "hotel-results">
     <div class="card horizontal" id="orange">
@@ -151,12 +152,12 @@
   </div>
   </div>
 <!-- create cards center 2-->
-  <div class="col s6" id = "Left">
+  <div class="col s6 m6" id = "Left">
     <h3 class="header">Ubicación</h3>
     <div id="events-results">
     <div class="card horizontal" id="orange">
       <div class="card-image">
-        <img src="public/images/Picture1.png" height="180">
+        <img src="public/images/Picture1.png">
       </div>
       <div class="card-stacked">
         <div class="card-content">
@@ -178,7 +179,7 @@
 
 <!-- create cards right 3 -->
 <div class="row">
-  <div class="col s6" id = "right">
+  <div class="col s6 m6" id = "right">
     <h3 class="header">Nuestra Propiedad</h3>
     <div id = "hotel-results">
     <div class="card horizontal" id="orange">
@@ -201,7 +202,7 @@
   </div>
   </div>
 <!-- create cards right -->
-  <div class="col s6" id = "Left">
+  <div class="col s6 m6" id = "Left">
     <h3 class="header">Sala de Conferencia</h3>
     <div id="events-results">
     <div class="card horizontal" id="orange">
@@ -230,7 +231,7 @@
 <!-- footer -->
     <footer class="page-footer" id="footer">
         <div class="footer-copyright">
-          <div class="container center">
+          <div class="container left">
           © 2019 Copyright by LoyDesign 
           <a class="grey-text text-lighten-4 right" href="#!">
             Jr. San Martín N° 127, Tarapoto | (51) 042 566 359 | +1 804 477 5524 | 942 889 047 | 986 585 921<br>
@@ -239,7 +240,8 @@
           </div>
         </div>
       </footer>
-    </div>  
+    <!-- </div>   -->
+  </div>
 
   
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
