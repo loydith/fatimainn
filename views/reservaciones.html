@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- style -->
-    <link rel="stylesheet" type="text/css "href="public/css/style.css">
+    <link rel="stylesheet" type="text/css "href="/css/style.css">
 </head>
 <body>
     <!-- Reservaciones -->
@@ -36,7 +36,7 @@
         <!-- The new nav[ data-target ==> dropdown1] -->
         <nav id="nav-head">
           <div class="nav-wrapper">
-            <img src="public/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+            <img src="/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a id="inicio" href="/index">Inicio</a></li>
@@ -76,13 +76,15 @@
     <form>
       <label for="nombre-input" id="re-nome"><i class="fas fa-user"></i>Nombre Completo</label>
       <input type="text" id="nombre-input" /><br />
+
       <div class="col s6">
-            <label for="number-input" id="number"><i class="fas fa-phone"></i>Teléfono</label>
-            <input type="email" id="number-input" /><br />
+      <label for="number-input" id="number"><i class="fas fa-phone"></i>Teléfono</label>
+      <input type="number" id="number-input" /><br />
       </div>
+      
       <div class="col s6">
             <label for="email-input" id="email"><i class="far fa-envelope"></i>Correo Electrónico</label>
-             <input type="number" id="email-input" /><br />
+             <input type="text" id="email-input" /><br />
       </div>
       <div class="col s6">
            <label for="start-date-input" id="checkin"><i class="far fa-calendar-alt"></i>Check In</label>
@@ -159,7 +161,7 @@
   <!-- links for phone -->
   <div class="col s6">
         <div class="card blue-light darken-1" id="card">
-            <h4 class="card-title"><img src="public/RedesSociales/phone.png" width="30px" alt="30px">Contactos</h4>
+            <h4 class="card-title"><img src="/RedesSociales/phone.png" width="30px" alt="30px">Contactos</h4>
             <p>
               +(51) 042 566 359 <br>
               +(51) 942 889 047 <br>
@@ -175,10 +177,10 @@
         <h4 class="card-title">Redes Sociales</h4>
         <p>
           <a href="mailto:loydith@gmail.com">ventas@fatimacamilainn.com</a><br><br>
-          <a href="mailto:loydith@gmail.com"><img src="public/RedesSociales/email.png" width="30px" alt="30px"></a>
-          <a href="https://www.facebook.com/fatimainnhotel"><img src="public/RedesSociales/facebook.png" width="30px" alt="30px"></a>
-          <a href="https://www.linkedin.com/company/fatimainn/?viewAsMember=true"><img src="public/RedesSociales/in.png" width="30px" alt="30px"></a>
-          <a href="https://twitter.com/fatimainnhotel"><img src="public/RedesSociales/twitter.png" width="30px" alt="30px"></a>
+          <a href="mailto:loydith@gmail.com"><img src="/RedesSociales/email.png" width="30px" alt="30px"></a>
+          <a href="https://www.facebook.com/fatimainnhotel"><img src="/RedesSociales/facebook.png" width="30px" alt="30px"></a>
+          <a href="https://www.linkedin.com/company/fatimainn/?viewAsMember=true"><img src="/RedesSociales/in.png" width="30px" alt="30px"></a>
+          <a href="https://twitter.com/fatimainnhotel"><img src="/RedesSociales/twitter.png" width="30px" alt="30px"></a>
           <a href="https://www.instagram.com/hotelfatimainn/"><img src="RedesSociales/instagram.png" width="30px" alt="30px"></a>
         </p> 
     </div>
@@ -240,7 +242,7 @@
   </script>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="public/js/javascript.js"></script>
+    <script src="/js/javascript.js"></script>
 
     <!-- React script tags-->
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
