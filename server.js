@@ -1,25 +1,47 @@
 // require("dotenv").config();
 var session = require('express-session')
 const express = require ('express');
-// const nodemailer = require('nodemailer');
 const sendMail = require ('./mail');
-// const passport = require('passport');
+const cookieParser = require('cookie-parser'); //hide the ids
+const SessionStore = require('express-session-sequelize')(session.Store);//create the store
 const path = require('path');
 const app = express();
-
-// const auth = require('./config/passport')(passport);
+const PORT = process.env.PORT || 3000;
+const db = require("./models");
+const Sequelize = require('sequelize');
+const config = require('./config/config.json');
+const passport = require('./passport/index.js');
+const dev = config['development'];
+var sequelize = new Sequelize(dev.database, dev.username, dev.password, {
+    host:'localhost',
+    dialect:'mysql'
+});
+const store = new SessionStore({
+    db: sequelize
+})
 
 // Satitic folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+var syncOptions = { force: false };
+// const auth = require('./config/passport')(passport);
+
 //data parsing
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-// app.use(passport.initialize())
-// app.use(passport.session())
+app.use(cookieParser());
+app.use(session({
+    secret: "fatima inn",
+    store,
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false }
+}));
 
-var syncOptions = { force: false };
-
+//possport => make sure the user and pass saved 
+app.use(passport.initialize());
+app.use(passport.session());
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
@@ -79,35 +101,25 @@ app.get('/signup', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'signup.html'));
 });
 
-// bring in the models
-var db = require("./models");
 
-// SESSION SETUP
-var sess = {
-    secret: "fatima inn",
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: false }
-  };
   
   // SESSION SETUP
   if (app.get("env") === "production") {
     app.set("trust proxy", 1); // trust first proxy
     sess.cookie.secure = true; // serve secure cookies
   };
-  
-  app.use(session(sess));
-  
 
 // Routes
-require("./routes/api-routes")(app);
-require("./routes/html-routes")(app);
-
-// listen on port 3000
-var PORT = process.env.PORT || 3000;
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+// require("./routes/api-routes")(app);
+// require("./routes/html-routes")(app);
+const auth = require('./routes/auth');
+app.use('/api/', auth);
+  db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+      console.log("App listening on PORT " + PORT);
+    });
   });
-});
+  
+
+
 

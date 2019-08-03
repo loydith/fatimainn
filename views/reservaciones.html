@@ -228,19 +228,18 @@
         </div>
       </footer>
   </div>  
-  <script>
-  
-  </script>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
+    <script>
+        $('#add-event').on('click', () => {
+            var user = JSON.parse(sessionStorage.getItem('user'));
+            const reservation = {
+            userId:user.userId
+            
+          }
+          console.log(reservation)
+        })
+      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/js/javascript.js"></script>
-
-    <!-- React script tags-->
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <!-- React component tag-->
-    <script src="like_button.js"></script>
-  
 </body>
 </html>
 
