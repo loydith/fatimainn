@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "Estudiante2019@",
+      "password": null,
       "database": "fatimainn_db",
       "host": "127.0.0.1",
       "port": 3306,
@@ -17,7 +17,7 @@
     },
     "production": {
       "username": "root",
-      "password": "Estudiante2019@",
+      "password": null,
       "database": "database_production",
       "host": "127.0.0.1",
       "port": 3306,

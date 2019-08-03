@@ -8,8 +8,8 @@ const sendMail = (email, subject, text, cb) => {
     const auth ={
         auth: {
             
-            api_key: '772cf054191f6594271c89e5f14bb947-f877bd7a-c255bae3',
-            domain: 'https://api.mailgun.net/v3/sandbox3e75a5192d664c0fbd44591bb919bc54.mailgun.org'
+            api_key: '',
+            domain: ''
             
         }
     };
