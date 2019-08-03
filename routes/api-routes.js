@@ -1,99 +1,114 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // index route loads view.html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/reservations.html"));
-  });
-
-  // auto login for dev purposes
-  app.get("/auto-login", function (req, res) {
-    req.session.loggedin = true;
-    req.session.userId = 1;
-    req.session.username = "loy";
-    res.send();
-  });
-
-  // create user from sign up form
-  app.post("/api/users", function (req, res) {
-    var user = req.body.username;
-    var pass = req.body.password;
-    db.User.create({
-      username: user,
-      password: pass
-    }).then(function (dbResponse) {
-      console.log(dbResponse.id);
-      console.log(dbResponse.username);
-      // user is now logged in, so save their data and loggedin state
-      req.session.loggedin = true;
-      req.session.userId = dbResponse.id;
-      req.session.username = dbResponse.username;
-      // redirect to user's dashboard
-      res.redirect("/dashboard");
-    });
-  });
-
-  // check user's login attempt from login form
-  // app.post("/login", function (req, res) {
-  //   var user = req.body.username;
-  //   var pass = req.body.pass;
-  //   db.User.findAll({
-  //     where: {
-  //       username: user,
-  //       password: pass
-  //     }
+  // Load index page
+  // app.get("/", function(req, res) {
+  //   db.Bracket.findAll({
+  //     include: [db.User]
   //   }).then(function (dbResponse) {
-      // console.log(dbResponse);
-      // console.log(dbResponse[0].id);
-      // if (dbResponse.length === 0) {
-      //   console.log("no user with those credentials");
-      //   res.json(false);
-      // } else {
-        // console.log("user found");
-        // // set the session loggedin state and userId
-        // req.session.loggedin = true;
-        // req.session.userId = dbResponse[0].id;
-        // req.session.username = dbResponse[0].username;
-        // console.log(req.session.loggedin);
-        // console.log(req.session.userId);
-        // res.redirect("/dashboard");
-        // res.json(true);
+  //     if (req.session.loggedin) {
+  //       console.log(dbResponse);
+  //       res.render("index", {
+  //         // pass in loggedin state, userid, username, and brackets
+  //         loggedin: req.session.loggedin,
+  //         userId: req.session.userId,
+  //         username: req.session.username,
+  //         brackets: dbResponse
+  //       });
+  //     } else {
+  //       res.render("index", { brackets: dbResponse });
   //     }
   //   });
   // });
 
-  // logout
-  app.get("/logout", function(req, res) {
-    // req.session.destroy();
-    req.session.destroy(function(err) {
-      res.redirect("/");
+  // show login page
+  app.get("/login", function(req, res) {
+    res.render("login");
+  });
+
+  // show sign up page
+  app.get("/signup", function(req, res) {
+    res.render("signup");
+  });
+
+  // after user logs in, show their reservaciones
+  app.get("/reservaciones", function(req, res) {
+    console.log(req.session.loggedin);
+    console.log(req.session.userId);
+
+    // find user's brackets
+    db.Bracket.findAll({
+      where: {
+        UserId: req.session.userId
+      }
+    }).then(function (dbResponse) {
+      res.render("reservaciones", {
+        // pass in loggedin state, userid, username and reservaciones
+        loggedin: req.session.loggedin,
+        userId: req.session.userId,
+        username: req.session.username,
+        reservaciones: dbResponse
+      });
     });
   });
 
-  // create new reservation
-  app.post("/api/reservation", function(req, res) {
-    var userId = req.session.userId;
-    var first_name = req.body.name;
-
-    var teamNames = JSON.parse(req.body);
-
-    db.Reservation.create({
-      first_name: firstName,
-      lastNames: lastNames,
-      UserId: userId
+  // display a reservation page
+  app.get("/reservaciones/:id", function(req, res) {
+    db.reservation.findOne({
+      where: {
+        id: req.params.id
+      }
     }).then(function(dbResponse) {
-      // display that reservation page
-      res.json(dbResponse.dataValues.id);
+      console.log(dbResponse);
+      if (req.session.loggedin) {
+        res.render("reservaciones", {
+          // pass in loggedin state, userid, username, and reservation
+          loggedin: req.session.loggedin,
+          userId: req.session.userId,
+          username: req.session.username,
+          // reservation: dbResponse,
+          id: dbResponse.dataValues.id,
+          
+        });
+      } else {
+        res.render("reservaciones", {
+          // pass in loggedin state, userid, username, and reservation
+          // brackets: dbResponse,
+          id: dbResponse.dataValues.id,
+          
+        });
+      }
     });
+  });
+
+  // create a bracket
+  // app.get("/create", function(req, res) {
+    // if logged in, show them the create page
+    // if (req.session.loggedin) {
+    //   res.render("createbrackets", {
+    //     // pass in loggedin state, userid, username, and brackets
+    //     loggedin: req.session.loggedin,
+    //     userId: req.session.userId,
+    //     username: req.session.username
+    //   });
+    // } else {
+    //   // if not logged in, prompt them to login (or sign up)
+  //     res.render("login");
+  //   }
+  // });
+
+  // Render 404 page for any unmatched routes
+  app.get("*", function(req, res) {
+    if (req.session.loggedin) {
+      res.render("404", {
+        // pass in loggedin state, userid, username, and brackets
+        loggedin: req.session.loggedin,
+        userId: req.session.userId,
+        username: req.session.username
+      });
+    } else {
+      // if not logged in, prompt them to login (or sign up)
+      res.render("404");
+    }
   });
 };
-// id int NOT NULL AUTO_INCREMENT,
-//    first_name varchar(100) NOT NULL,
-//    last_name varchar(200) NOT NULL,
-//    email varchar(50) NOT NULL,
-//    phone varchar(12) NOT Null,
-//    room_type varchar(100) NOT Null,
-//    room_qty integer(17) NOT Null,
-//    cr_qty integer(2) NOT Null,
-//    message varchar(500) NOT NULL,
-//    PRIMARY KEY (id)
