@@ -59,7 +59,7 @@ app.get('/mediodia', (req, res) =>{
 });
 
 app.get('/paqueteturistico', (req, res) =>{
-    res.sendFile(path.join(__dirname, 'views', 'paquteturistico.html'));
+    res.sendFile(path.join(__dirname, 'views', 'paqueteturistico.html'));
 });
 
 app.get('/reservaciones', (req, res) =>{

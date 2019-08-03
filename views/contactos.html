@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact | Fatima Inn</title>
-
+    <!-- materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    
-   <!-- style -->
-    <link rel="stylesheet" type="text/css "href="public/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
     <!-- contactos -->
@@ -35,7 +34,7 @@
       <!-- The new nav -->
       <nav id="nav-head">
         <div class="nav-wrapper">
-            <img src="public/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+            <img src="/images/Logo-FatimaInn.png" height="80" class="brand-logo">
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
               <li><a id="inicio" href="/index">Inicio</a></li>
@@ -45,7 +44,7 @@
                <li><a id="explore" href="/login">Login</a></li>
               <li><a id="explore" href="/singup">Sing Up</a></li>
         <!-- Dropdown Trigger -->
-              <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
+              <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
               <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
           </ul>
         </div>
@@ -60,7 +59,7 @@
           <li><a id="explore" href="/login">Login</a></li>
          <li><a id="explore" href="/singup">Sing Up</a></li>
       <!-- Dropdown Trigger -->
-         <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
+         <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
          <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
       </ul>
  <br>
@@ -69,61 +68,67 @@
   <p  id="orange"></p>
 </form>
 <!-- form     -->
+<div class= "container">
 <div class="row">
+ <br>
     <form class="col s6" id="contactanos">
+      <h2 class="center align" id="contact-us">Contact Us</h2>
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s5">
           <i class="material-icons prefix"></i>
-          <input placeholder="Whole Name" id="wh_name" type="text" name ="name" class="validate">
-          <label for="wh_name"><i class="fas fa-user"></i></label>
+          <input placeholder="Full Name" id="full_name" type="text" name ="name" class="validate">
+          <label for="full_name"><i class="material-icons">person</i></label>
         </div>
 
-        <div class="input-field col s6">
+        <div class="input-field col s5">
           <i class="material-icons prefix"></i>
           <input placeholder="Email" id="email" type="email" name="email" class="validate">
-          <label for="email"><i class="far fa-envelope"></i></label>
-        </div>
-        
-        <div class="input-field col s6">
-          <i class="material-icons prefix"></i>
-          <input id="subjet" type="text" class="validate">
-          <label for="subjet"><i class="far fa-address-card"></i>Asunto</label>
+          <label for="email"><i class="material-icons">email</i></label>
         </div>
 
-        <div class="input-field col s6">
+        <div class="input-field col s5">
           <i class="material-icons prefix"></i>
-          <input id="phone" type="number" class="validate">
-          <label for="phone"><i class="fas fa-phone"></i>Teléfono</label>
+          <input placeholder="Subject" id="subject" type="text" class="validate">
+          <label for="subject"><i class="material-icons">subject</i></label>
+        </div>
+
+        <div class="input-field col s5">
+          <i class="material-icons prefix"></i>
+          <input placeholder="+(51) 555 555 555" id="phone" type="number" class="validate">
+          <label for="phone"><i class="material-icons">phone</i></label>
         </div>
 
         <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field col s10">
             <i class="material-icons prefix"></i>
             <textarea placeholder="Message" id="textarea2" name ="message" class="materialize-textarea" data-length="120" style="height:200px"></textarea>
-            <label for="textarea2"><i class="fas fa-align-justify"></i></label>
+            <label for="textarea2"><i class="material-icons">message</i></label>
           </div>
         </div>
-
-        <button class="btn waves-effect waves-light" type="submit" name="emailaddress" id="submit">Enviar
-          <i class="material-icons right"></i>
+        <div class="buttonHolder">
+        <button class="btn waves-effect waves-light" type="submit" name="emailaddress" id="submit"><span id="txt1">Enviar</span><i class="material-icons left">email</i>
+        </div>  
         </button>
       </div>
     </form>
       <!-- termino de formulario -->
       <!-- links for address -->
-      <div class="col s6" >
+      <div class="col s5" id="links">
         <div class="card blue-light darken-1" id="card">
             <h4 class="card-title"><i class="fas fa-hotel"></i> Dirección</h4>
             <p> Jr. San Martín N° 127, Tarapoto, San Martin - Peru<br>
-                Plaza de Armas    
+                Plaza de Armas <br>
+                <br>
+                <br> 
+                  
             </p> 
         </div>
   </div>     
 
   <!-- links for phone -->
-  <div class="col s6">
+  <div class="col s5" id="links">
         <div class="card blue-light darken-1" id="card">
-          <h4 class="card-title"><img src="public/RedesSociales/phone.png" width="27px" alt="27px">Contáctos</h4>
+          <h4 class="card-title"><img src="/RedesSociales/phone.png" width="27px" alt="27px">Contáctos</h4>
           <p>
             +(51) 042 566 359 <br>
             +(51) 942 889 047 <br>
@@ -134,22 +139,22 @@
     </div>
   
   <!-- links for email -->
-  <div class="col s6">
+  <div class="col s5" id="links">
     <div class="card blue-light darken-1" id="card">
       <h4 class="card-title">Redes Sociales</h4>
       <p>
         <a href="mailto:loydith@gmail.com">ventas@fatimacamilainn.com</a><br><br>
-        <a href="mailto:loydith@gmail.com"><img src="public/RedesSociales/email.png" width="30px" alt="30px"></a>
-        <a href="https://www.facebook.com/fatimainnhotel"><img src="public/RedesSociales/facebook.png" width="30px" alt="30px"></a>
-        <a href="https://www.linkedin.com/company/fatimainn/?viewAsMember=true"><img src="public/RedesSociales/in.png" width="30px" alt="30px"></a>
-        <a href="https://twitter.com/fatimainnhotel"><img src="public/RedesSociales/twitter.png" width="30px" alt="30px"></a>
-        <a href="https://www.instagram.com/hotelfatimainn/"><img src="public/RedesSociales/instagram.png" width="30px" alt="30px"></a>
+        <a href="mailto:loydith@gmail.com"><img src="/RedesSociales/email.png" width="30px" alt="30px"></a>
+        <a href="https://www.facebook.com/fatimainnhotel"><img src="/RedesSociales/facebook.png" width="30px" alt="30px"></a>
+        <a href="https://www.linkedin.com/company/fatimainn/?viewAsMember=true"><img src="/RedesSociales/in.png" width="30px" alt="30px"></a>
+        <a href="https://twitter.com/fatimainnhotel"><img src="/RedesSociales/twitter.png" width="30px" alt="30px"></a>
+        <a href="https://www.instagram.com/hotelfatimainn/"><img src="/RedesSociales/instagram.png" width="30px" alt="30px"></a>
       </p> 
     </div>
   </div>
 
   </div>
-
+</div>
 <!-- footer -->
     <footer class="page-footer" id="footer">
         <div class="footer-copyright">
@@ -169,8 +174,8 @@
    <script>
      $('form').on('submit', (e) =>{
        e.preventDefault();
-      const name = $('#wh_name').val().trim(); 
-      const subject = $('#subjet').val().trim();
+      const name = $('#full_name').val().trim(); 
+      const subject = $('#subject').val().trim();
       const email = $('#email').val().trim();
       const phone = $('#phone').val().trim();
       const textarea = $('#textarea2').val().trim()
@@ -193,6 +198,6 @@
   
     <!-- <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="public/js/javascript.js"></script>
+    <script src="/js/javascript.js"></script>
 </body>
 </html>
