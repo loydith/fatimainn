@@ -1,7 +1,11 @@
 {
     "development": {
       "username": "root",
+<<<<<<< Updated upstream
       "password": "Valval12!",
+=======
+      "password": "P@ssword",
+>>>>>>> Stashed changes
       "database": "fatimainn_db",
       "host": "127.0.0.1",
       "port": 3306,
