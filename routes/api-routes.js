@@ -37,9 +37,9 @@ module.exports = function(app) {
     console.log(req.session.userId);
 
     // find user's brackets
-    db.Bracket.findAll({
+    db.user.findAll({
       where: {
-        UserId: req.session.userId
+        userId: req.session.userId
       }
     }).then(function (dbResponse) {
       res.render("reservaciones", {

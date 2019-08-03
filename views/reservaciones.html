@@ -1,246 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Booking | Fatima Inn</title>
-     <!-- materialize -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!-- style -->
-     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Booking | Fatima Inn</title>
+  <!-- materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- style -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
+
 <body>
-    <!-- Reservaciones -->
-    
-        <!-- Dropdown Structure  web-->
-        <ul id="dropdown1" class="dropdown-content">
-          <li><a href="/mediodia">Media día</a></li>
-           <li><a href="/diacompleto">Día Completo</a></li>
-           <li><a href="/paqueteturistico">Paquete Turístico</a></li>
-          <li class="divider"></li>
-          <li><a id="salir" href="#!">Salir</a></li>
-        </ul>
-        <!-- Dropdown Structure  mobile-->
-        <ul id="dropdown2" class="dropdown-content">
-          <li><a href="/mediodia">Media día</a></li>
-           <li><a href="/diacompleto">Día Completo</a></li>
-           <li><a href="/paqueteturistico">Paquete Turístico</a></li>
-          <li class="divider"></li>
-          <li><a id="salir" href="#!">Salir</a></li>
-        </ul>
-        <!-- The new nav[ data-target ==> dropdown1] -->
-        <nav id="nav-head">
-          <div class="nav-wrapper">
-            <img src="/images/Logo-FatimaInn.png" height="80" class="brand-logo">
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a id="inicio" href="/index">Inicio</a></li>
-                 <li><a id="habitaciones" href="/habitaciones">Habitaciones</a></li>
-                 <li><a id="contactos" href="/contactos">Contáctenos</a></li>
-                 <li><a id="auditorio" href="/auditorio">Auditorio</a></li>
-                 <li><a id="explore" href="/login">Login</a></li>
-                 <li><a id="explore" href="/signup">Sign Up</a></li>
-          <!-- Dropdown Trigger -->
-                <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
-            </ul>
-          </div>
-        </nav>
-        <!-- data-target ==> dropdown2 -->
-        <ul class="sidenav" id="mobile-demo">
-            <li><a id="inicio" href="/index">Inicio</a></li>
-            <li><a id="habitaciones" href="/habitaciones">Habitaciones</a></li>
-            <li><a id="contactos" href="/contactos">Contáctenos</a></li>
-            <li><a id="auditorio" href="/auditorio">Auditorio</a></li>
-            <li><a id="explore" href="/login">Login</a></li>
-         <li><a id="explore" href="/signup">Sign Up</a></li>
+  <!-- Reservaciones -->
+
+  <!-- Dropdown Structure  web-->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="/mediodia">Media día</a></li>
+    <li><a href="/diacompleto">Día Completo</a></li>
+    <li><a href="/paqueteturistico">Paquete Turístico</a></li>
+    <li class="divider"></li>
+    <li><a id="salir" href="#!">Salir</a></li>
+  </ul>
+  <!-- Dropdown Structure  mobile-->
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="/mediodia">Media día</a></li>
+    <li><a href="/diacompleto">Día Completo</a></li>
+    <li><a href="/paqueteturistico">Paquete Turístico</a></li>
+    <li class="divider"></li>
+    <li><a id="salir" href="#!">Salir</a></li>
+  </ul>
+  <!-- The new nav[ data-target ==> dropdown1] -->
+  <nav id="nav-head">
+    <div class="nav-wrapper">
+      <img src="/images/Logo-FatimaInn.png" height="80" class="brand-logo">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a id="inicio" href="/index">Inicio</a></li>
+        <li><a id="habitaciones" href="/habitaciones">Habitaciones</a></li>
+        <li><a id="contactos" href="/contactos">Contáctenos</a></li>
+        <li><a id="auditorio" href="/auditorio">Auditorio</a></li>
+        <li><a id="explore" href="/login">Login</a></li>
+        <li><a id="explore" href="/signup">Sign Up</a></li>
         <!-- Dropdown Trigger -->
-           <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
-           <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
-        </ul>
-        <br>
-              
-<!-- formulario -->
-<form action="#">
-    <p  id="orange"></p>
-  </form>
+        <li><a id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i
+              class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- data-target ==> dropdown2 -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a id="inicio" href="/index">Inicio</a></li>
+    <li><a id="habitaciones" href="/habitaciones">Habitaciones</a></li>
+    <li><a id="contactos" href="/contactos">Contáctenos</a></li>
+    <li><a id="auditorio" href="/auditorio">Auditorio</a></li>
+    <li><a id="explore" href="/login">Login</a></li>
+    <li><a id="explore" href="/signup">Sign Up</a></li>
+    <!-- Dropdown Trigger -->
+    <li><a id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i
+          class="material-icons right">arrow_drop_down</i></a></li>
+    <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
+  </ul>
+  <br>
+  <br>
+  <!-- formulario -->
+  
   <!-- Create the form -->
   <div class="container">
-  <div class="row">
-      <div class="col s6" id="contactanos">
-  <!-- formulario -->
-    <form>
-     
-      <div class="col s6">
-           <label for="start-date-input" id="checkin"><i class="far fa-calendar-alt"></i>Check In</label>
-           <input type="date" id="start-date-input" /><br />
-       </div>
-       <div class="col s6">
-          <label for="end-date-input" id="checkout"><i class="far fa-calendar-alt"></i>Check Out</label>
-          <input type="date" id="end-date-input" /><br />
-        </div>
+    <div class="row formMargin">
+      <form class="col s6" id="reserve-form">
+        <!-- formulario -->
         
-        <div class="col s12">
+          <h2 class="date-text">Travel Dates</h2>
+          <div class="col s6">
+            <label for="start-date-input" id="checkin"><i class="far fa-calendar-alt"></i>Check In</label>
+            <input type="date" id="start-date-input" /><br />
+          </div>
+          <div class="col s6">
+            <label for="end-date-input" id="checkout"><i class="far fa-calendar-alt"></i>Check Out</label>
+            <input type="date" id="end-date-input" /><br />
+          </div>
+          <h2 class="room-text">Room Details</h2>
+          <div class="col s12">
+            <label>How many rooms?</label>
+            <select class="browser-default">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="col s6">
+            <label>How many adults?</label>
+            <select class="browser-default">
+              <option value="1">1 Adult</option>
+              <option value="2">2 Adults</option>
+              <option value="3">3 Adults</option>
+              <option value="4">4 Adults</option>
+            </select>
+          </div>
+          <div class="col s6">
+            <label>How many children?</label>
+            <select class="browser-default">
+              <option value="0">0 Children</option>
+              <option value="1">1 Children</option>
+              <option value="2">2 Children</option>
+              <option value="3">3 Children</option>
+              <option value="4">4 Children</option>
+            </select>
+          </div>
+
+          <div class="col s12">
+            <br>
+          </div>
           <!-- seleccionar habitación -->
-        <form action="#">
-            <p  id="orange"></p>
-          </form>
-          <h1 id="texto-centro">Seleccione el tipo de habitación</h1>
-          <form action="#">
-              <p  id="orange"></p>
-            </form>
-        </div>
+          <h2 class="roomtypes-text">Room Types</h2>
           <!-- botonoes para seleccionar -->
           <div class="col s6">
-          <p>
-          <label>
-            <input class="with-gap" name="group1" type="radio"  checked />
-            <span id ="texto">Habitación Individual Economica</span>
-          </label>
-          </p>
-          <p>
-            <label>
-              <input class="with-gap" name="group1" type="radio" id="letra" />
-              <span id ="texto">Habitación Matrimonial Economica</span>
-            </label>
-          </p>
-           <p>
+            <p>
               <label>
-                <input class="with-gap" name="group1" type="radio" id="letra"/>
-                <span id ="texto">Habitación 2Camas Economica</span>
+                <input class="with-gap" name="group1" type="radio" checked />
+                <span id="texto">Habitación Individual Economica</span>
               </label>
             </p>
-        </div>
-        <!-- habitaciones superiores -->
-        <div class="col s6">
-        <p>
-          <label>
-            <input class="with-gap" name="group1" type="radio" id="letra"/>
-            <span id ="texto">Habitación Individual Superior</span>
-          </label>
-        </p>
-        <p>
-          <label>
-            <input class="with-gap" name="group1" type="radio" id="letra"/>
-            <span id ="texto">Habitación Matrimonial Superior</span>
-          </label>
-        </p>
-          <p>
+            <p>
               <label>
                 <input class="with-gap" name="group1" type="radio" id="letra" />
-                <span id ="texto">Habitación 2Camas Superior</span>
+                <span id="texto">Habitación Matrimonial Economica</span>
               </label>
             </p>
-        </div>
-      <!-- termino de seleccion -->
-  
-      <!-- Button triggers new event to be added -->
-      <input id="add-event" class="btn btn-info" type="submit" value="Reserva" />
-    </form>
-    </div>
-  
-  
-    <!-- termino de formulario -->
-  <!-- comienzo de texto -->
-    <div class="col s6">
-      <!-- cards de contactos -->
-  <!-- links for phone -->
-  <div class="col s12">
-        <div class="card blue-light darken-1" id="card">
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <span id="texto">Habitación 2Camas Economica</span>
+              </label>
+            </p>
+          </div>
+          <!-- habitaciones superiores -->
+          <div class="col s6">
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <span id="texto">Habitación Individual Superior</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <span id="texto">Habitación Matrimonial Superior</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <span id="texto">Habitación 2Camas Superior</span>
+              </label>
+            </p>
+          </div>
+          <!-- termino de seleccion -->
+
+          <!-- Button triggers new event to be added -->
+          <div class="btn-div col s12">
+            <input id="add-event" class="btn btn-info" type="submit" value="Reserva" />
+          </div>
+        </form>
+     
+
+
+      <!-- termino de formulario -->
+      <!-- comienzo de texto -->
+      <div class="col s6">
+        <!-- cards de contactos -->
+        <!-- links for phone -->
+        <div class="col s12">
+          <div class="card blue-light darken-1" id="card">
             <h4 class="card-title"><img src="/RedesSociales/phone.png" width="30px" alt="30px">Contactos</h4>
             <p>
               +(51) 042 566 359 <br>
               +(51) 942 889 047 <br>
               +(51) 986 585 921 <br>
               +1 804-4775524 English
-            </p> 
-        </div>
-    </div>
-  
-  <!-- links for email -->
-  <div class="col s12">
-    <div class="card blue-light darken-1" id="card">
-        <h4 class="card-title">Redes Sociales</h4>
-        <p>
-          <a href="mailto:loydith@gmail.com">ventas@fatimacamilainn.com</a><br><br>
-          <a href="mailto:loydith@gmail.com"><img src="/RedesSociales/email.png" width="30px" alt="30px"></a>
-          <a href="https://www.facebook.com/fatimainnhotel"><img src="/RedesSociales/facebook.png" width="30px" alt="30px"></a>
-          <a href="https://www.linkedin.com/company/fatimainn/?viewAsMember=true"><img src="/RedesSociales/in.png" width="30px" alt="30px"></a>
-          <a href="https://twitter.com/fatimainnhotel"><img src="/RedesSociales/twitter.png" width="30px" alt="30px"></a>
-          <a href="https://www.instagram.com/hotelfatimainn/"><img src="RedesSociales/instagram.png" width="30px" alt="30px"></a>
-        </p> 
-    </div>
-  </div>
-</div>
-  </div>
-<!-- termino de cards de contactos -->
-      <div class="col s12">
-          <form action="#">
-            <p  id="orange"></p>
-          </form>
-      <div><h3 class="card-title">Información Importante para su reserva</h3>
-          <form action="#">
-            <p  id="orange"></p>
-          </form>
-        </div>
-        <h4>
-            <i class="far fa-calendar-alt"></i> Le informamos que la hora de ingreso “Check In” es a las 13:00pm y Salida “Check Out” 12:30pm. <br>
-            •  En el caso si requieran extender su estancia, éste tiene un costo adicional cuyo importe es de S/.40.00. <br>
-            •  Para la confirmación de su reserva deberá realizar el pago de su primera noche.<br>
-            •  Debe contactarnos a ventas@fatimacamilainn.com para enviarles nuestros datos de la empresa.<br>
-            •  Contamos con pago Online a través de Visa Net.<br>
-            <i class="fas fa-taxi"></i> Todas la reservaciones directas cuentan con taxi gratuito.<br>
-            •  En las reservaciones grupales no aplica taxi gratuito.<br>
-            <i class="fas fa-user"></i> Cuenta con una capacidad máxima de 43 personas.<br>
-            <i class="fas fa-child"></i> <i class="fas fa-baby"></i> Niños de 0 entre 10 años no paga alojamiento,<i class="fas fa-utensils"></i> solo extra S/.10 por desayuno.<br>
-            •  Para reservaciones que desean toda las habitaciones contamos con precios especiales, Llamenos <i class="fas fa-phone"></i> +51 942889047.<br>
-            •  Nos ubicamos en el centro de la ciudad, a solo pasos de la Plaza de Armas de la Ciudad de Tarapoto.<br><br>
-            <i class="fas fa-hotel"></i> Fátima Inn Hotel cuenta con:<br>
-                <i class="fas fa-bed"></i> 6 Habitaciones Individuales (Camas de 2 Plazas c/u). <br>
-                <i class="fas fa-bed"></i> 7 Habitaciones Matrimoniales (Camas de 2 Plazas c/u). <br>
-                <i class="fas fa-bed"></i> <i class="fas fa-bed"></i> 2  Habitaciones Dobles ( De 2 Camas de 2 plazas c/u).<br>
-                <i class="fas fa-bed"></i> <i class="fas fa-bed"></i> 2  Habitaciones Dobles (1 Cama de 2 Plazas y 1 Cama de 1 ½ Plaza).<br>
-                <i class="fas fa-bed"></i> <i class="fas fa-bed"></i>  <i class="fas fa-bed"></i> 1  Habitación Triple (2 Camas de 2 Plazas c/u y 1 Cama de 1½ Plaza).
-        </h4>
-      </div>
-    </div>
-    
-  </div>
-  
-  
-  <!-- termino de texto -->
-  
-  <!-- Empty div to test React-->
-  <div id="like_button_container"></div>
-      <!-- footer -->
-    <footer class="page-footer" id="footer">
-        <div class="footer-copyright">
-          <div class="container">
-              © 2019 Copyright by LoyDesign 
-          <a class="grey-text text-lighten-4 right" href="#!">
-              Jr. San Martín N° 127, Tarapoto | (51) 042 566 359 | +1 804 477 5524 | 942 889 047 | 986 585 921<br>
-              ventas@fatimacamilainn.com | @fatimainnhotel
-              </a>
+            </p>
           </div>
         </div>
-      </footer>
-  </div>  
+
+        <!-- links for email -->
+        <div class="col s12">
+          <div class="card blue-light darken-1" id="card">
+            <h4 class="card-title">Redes Sociales</h4>
+            <p>
+              <a href="mailto:loydith@gmail.com">ventas@fatimacamilainn.com</a><br><br>
+              <a href="mailto:loydith@gmail.com"><img src="/RedesSociales/email.png" width="30px" alt="30px"></a>
+              <a href="https://www.facebook.com/fatimainnhotel"><img src="/RedesSociales/facebook.png" width="30px"
+                  alt="30px"></a>
+              <a href="https://www.linkedin.com/company/fatimainn/?viewAsMember=true"><img src="/RedesSociales/in.png"
+                  width="30px" alt="30px"></a>
+              <a href="https://twitter.com/fatimainnhotel"><img src="/RedesSociales/twitter.png" width="30px"
+                  alt="30px"></a>
+              <a href="https://www.instagram.com/hotelfatimainn/"><img src="RedesSociales/instagram.png" width="30px"
+                  alt="30px"></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    
+    <!-- termino de cards de contactos -->
+    <!-- <div class="col s12">
+      <form action="#">
+        <p id="orange"></p>
+      </form>
+      <div> -->
+        
+        <!-- <form action="#">
+          <p id="orange"></p>
+        </form>
+      </div>
+      <h4> -->
+        <div class="col s6" id="info-text">
+        <h4 class="card-title">Important Information for your Stay</h4>
+      
+          <li><i class="far fa-calendar-alt"></i> Le informamos que la hora de ingreso “Check In” es a las 13:00pm y Salida
+        “Check Out” 12:30pm</li>
+          <li>En el caso si requieran extender su estancia, éste tiene un costo adicional cuyo importe es de S/.40.00</li>
+          <li>Para la confirmación de su reserva deberá realizar el pago de su primera noche</li>
+          <li>Debe contactarnos a ventas@fatimacamilainn.com para enviarles nuestros datos de la empresa</li>
+          <li>Contamos con pago Online a través de Visa Net</li>
+          <li><i class="fas fa-taxi"></i>Todas la reservaciones directas cuentan con taxi gratuito</li>
+          <li>En las reservaciones grupales no aplica taxi gratuito</li>
+          <li><i class="fas fa-user"></i> Cuenta con una capacidad máxima de 43 personas</li>
+          <li><i class="fas fa-child"></i> <i class="fas fa-baby"></i> Niños de 0 entre 10 años no paga alojamiento <i class="fas fa-utensils"></i> solo extra S/.10 por desayuno</li>
+          <li>Para reservaciones que desean toda las habitaciones contamos con precios especiales, Llamanos <i
+          class="fas fa-phone"></i> +51 942889047</li>
+          <li>Nos ubicamos en el centro de la ciudad, a solo pasos de la Plaza de Armas de la Ciudad de Tarapoto</li>
+          </div>
+        
+        <div class= "col s12" id="info-text">
+          <br>
+          <i class="fas fa-hotel"></i> Fátima Inn Hotel cuenta con:<br>
+          <i class="fas fa-bed"></i> 6 Habitaciones Individuales (Camas de 2 Plazas c/u) <br>
+          <i class="fas fa-bed"></i> 7 Habitaciones Matrimoniales (Camas de 2 Plazas c/u) <br>
+          <i class="fas fa-bed"></i> <i class="fas fa-bed"></i> 2 Habitaciones Dobles ( De 2 Camas de 2 plazas c/u)<br>
+          <i class="fas fa-bed"></i> <i class="fas fa-bed"></i> 2 Habitaciones Dobles (1 Cama de 2 Plazas y 1 Cama de 1 ½
+          Plaza)<br>
+          <i class="fas fa-bed"></i> <i class="fas fa-bed"></i> <i class="fas fa-bed"></i> 1 Habitación Triple (2 Camas de
+          2 Plazas c/u y 1 Cama de 1½ Plaza) 
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+  <!-- termino de texto -->
+
+  <!-- Empty div to test React-->
+  <div id="like_button_container"></div>
+  <!-- footer -->
+  <footer class="page-footer" id="footer">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2019 Copyright by LoyDesign
+        <a class="grey-text text-lighten-4 right" href="#!">
+          Jr. San Martín N° 127, Tarapoto | (51) 042 566 359 | +1 804 477 5524 | 942 889 047 | 986 585 921<br>
+          ventas@fatimacamilainn.com | @fatimainnhotel
+        </a>
+      </div>
+    </div>
+  </footer>
+  </div>
   <script>
-  
+
   </script>
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/js/javascript.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/js/javascript.js"></script>
 
-    <!-- React script tags-->
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <!-- React component tag-->
-    <script src="like_button.js"></script>
-  
+  <!-- React script tags-->
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <!-- React component tag-->
+  <script src="like_button.js"></script>
+
 </body>
-</html>
 
+</html>
