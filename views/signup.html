@@ -124,10 +124,12 @@
               if (pass === pass2) {
                 $.ajax({
                   method: "POST",
-                  url: "/api/users",
+                  url: "/api/signup",
                   data: { username: user, password: pass }
                 }).then(function (data) {
-                  window.location.replace("/dashboard");
+                  console.log(data);
+                  sessionStorage.setItem('user', JSON.stringify(data));
+                  window.location.replace("/reservaciones");
                 })
               } else {
                 // error passwords don't match
@@ -137,6 +139,5 @@
           </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/js/javascript.js"></script>
   </body>
 </html>

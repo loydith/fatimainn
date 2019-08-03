@@ -123,20 +123,22 @@
               var pass = $("#pass").val().trim();
               $.ajax({
                 method: "POST",
-                url: "/login",
+                url: "/api/login",
                 data: { username: user, password: pass }
               }).then(function(data) {
                 if (!data) {
                   //show error message - not a valid user
                   $(".login-error").css("display", "block");
                 } else {
-                  alert(data.message)
+                  console.log(data);
+                  sessionStorage.setItem('user', JSON.stringify(data));
+                  window.location.replace("/reservaciones");
                 }
               })
             });
           </script>
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/js/javascript.js"></script>
+    
   </body>
 </html>
