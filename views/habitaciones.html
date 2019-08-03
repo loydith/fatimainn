@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rooms | Fatima Inn</title>
+    <!-- materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- style -->
-    <link rel="stylesheet" type="text/css "href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
   <!-- The new nav[ data-target ==> dropdown1] -->
   <nav id="nav-head">
     <div class="nav-wrapper">
-      <img src="/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+      <img src="/images/Logo-FatimaInn.png" height="80" class="brand-logo">
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
           <li><a id="inicio" href="/index">Inicio</a></li>
@@ -46,7 +46,7 @@
            <li><a id="explore" href="/login">Login</a></li>
           <li><a id="explore" href="/singup">Sing Up</a></li>
     <!-- Dropdown Trigger -->
-          <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
+          <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
       </ul>
     </div>
@@ -60,7 +60,7 @@
       <li><a id="explore" href="/login">Login</a></li>
       <li><a id="explore" href="/signup">Sign Up</a></li>
   <!-- Dropdown Trigger -->
-     <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
+     <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
      <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
   </ul>
   <br>
@@ -72,7 +72,7 @@
 
    <!-- terminado el slide -->
     <!-- Habitacion Individual Economica -->
-        <div class="row">
+        <div class="row" id="room-div">
             <div class="col s4" id = "right">
                 <img src="/images/HIndividual1.jpg" height="200">
             </div>
@@ -106,7 +106,7 @@
           </form>
    <!-- Habitacion Individual Superior -->
              
-             <div class="row">
+             <div class="row" id="room-div">
                 <div class="col s4" id = "right">
                     <img src="/images/HIndividual2.jpg" height="200">
                 </div>
@@ -139,7 +139,7 @@
                 <p  id="orange"></p>
               </form>
   <!-- Habitacion Matrimonial Economica -->
-                <div class="row">
+                <div class="row" id="room-div">
                     <div class="col s4" id = "right">
                         <img src="/images/HMatrimonial3.JPG" height="200">
                     </div>
@@ -173,7 +173,7 @@
                     <p  id="orange"></p>
                   </form>
                 <!-- Matrimonial superior -->
-                <div class="row">
+                <div class="row" id="room-div">
                     <div class="col s4" id = "right">
                         <img src="/images/HMatrimonial4.JPG" height="200">
                     </div>
@@ -206,7 +206,7 @@
                     <p  id="orange"></p>
                   </form>
                 <!-- Habitacion de 2 camas -->
-                <div class="row">
+                <div class="row" id="room-div">
                     <div class="col s4" id = "right">
                         <img src="/images/Hab2Camas1.JPG" height="200">
                     </div>
@@ -240,7 +240,7 @@
                   </form>
                 <!-- Habitacion 2 camas superior
                  -->
-                 <div class="row">
+                 <div class="row" id="room-div">
                     <div class="col s4" id = "right">
                         <img src="/images/Hab2Camas2.JPG" height="200">
                     </div>

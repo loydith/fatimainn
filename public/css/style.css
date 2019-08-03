@@ -1,5 +1,5 @@
 body{
-    background: rgb(249, 250, 248);
+    background: rgb(253, 250, 246);
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(37, 26, 26);
 
@@ -72,15 +72,13 @@ p{
 }
 #contactanos {
   border: .8px solid orange;
-  
+  margin-left: 3%;
 }
 
 #add-event{
   text-align: center;
 }
-#btn-centro{
-  
-}
+
 h1{
   color:rgb(56, 48, 48); 
   font-size: 12px;
@@ -107,6 +105,7 @@ h4{
 .material-icons{
   height: 20px;
 }
+
 #letra{
   font-size:rgb(56, 48, 48); 
 }
@@ -126,9 +125,42 @@ h5{
     /* height: 50px; */
     font-size: .9em;
     padding-top: 2px;
+    margin-top:100px;
+    padding:5px 0;
+    width:100%;
+  
+  
 }
 .card.horizontal {
   overflow: hidden;
 }
 
+.buttonHolder { 
+  text-align: center;
+}
 
+#links {
+  margin-left: 3%;
+}
+#room-div {
+ margin-left: 5em;
+ margin-right: -25em;
+}
+#login-form, #signup-form {
+  border: .8px solid orange;
+  margin-left: 15%;
+  margin-right: 15%;
+  height: 75%;
+  padding: 40px;
+  border-radius: 10px;
+}
+.text-center {
+  text-align: center;
+  font-size: 3em;
+  color: green;
+}
+#contact-us {
+  text-align: center;
+  font-size: 3em;
+  color: green;
+}

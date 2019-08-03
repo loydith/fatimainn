@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Booking | Fatima Inn</title>
-    <!-- materialize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <!-- style -->
-    <link rel="stylesheet" type="text/css "href="/css/style.css">
+     <!-- materialize -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- style -->
+     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
     <!-- Reservaciones -->
-    <div class="container">
+    
         <!-- Dropdown Structure  web-->
         <ul id="dropdown1" class="dropdown-content">
           <li><a href="/mediodia">Media día</a></li>
@@ -36,7 +34,7 @@
         <!-- The new nav[ data-target ==> dropdown1] -->
         <nav id="nav-head">
           <div class="nav-wrapper">
-            <img src="/images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
+            <img src="/images/Logo-FatimaInn.png" height="80" class="brand-logo">
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a id="inicio" href="/index">Inicio</a></li>
@@ -46,7 +44,7 @@
                  <li><a id="explore" href="/login">Login</a></li>
                  <li><a id="explore" href="/signup">Sign Up</a></li>
           <!-- Dropdown Trigger -->
-                <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right"></i></a></li>
+                <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
             </ul>
           </div>
@@ -60,7 +58,7 @@
             <li><a id="explore" href="/login">Login</a></li>
          <li><a id="explore" href="/signup">Sign Up</a></li>
         <!-- Dropdown Trigger -->
-           <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right"></i></a></li>
+           <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
            <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
         </ul>
         <br>
@@ -70,6 +68,7 @@
     <p  id="orange"></p>
   </form>
   <!-- Create the form -->
+  <div class="container">
   <div class="row">
       <div class="col s6" id="contactanos">
   <!-- formulario -->
@@ -154,12 +153,13 @@
     </form>
     </div>
   
+  
     <!-- termino de formulario -->
   <!-- comienzo de texto -->
     <div class="col s6">
       <!-- cards de contactos -->
   <!-- links for phone -->
-  <div class="col s6">
+  <div class="col s12">
         <div class="card blue-light darken-1" id="card">
             <h4 class="card-title"><img src="/RedesSociales/phone.png" width="30px" alt="30px">Contactos</h4>
             <p>
@@ -172,7 +172,7 @@
     </div>
   
   <!-- links for email -->
-  <div class="col s6">
+  <div class="col s12">
     <div class="card blue-light darken-1" id="card">
         <h4 class="card-title">Redes Sociales</h4>
         <p>
@@ -184,6 +184,8 @@
           <a href="https://www.instagram.com/hotelfatimainn/"><img src="RedesSociales/instagram.png" width="30px" alt="30px"></a>
         </p> 
     </div>
+  </div>
+</div>
   </div>
 <!-- termino de cards de contactos -->
       <div class="col s12">
