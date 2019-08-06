@@ -69,7 +69,6 @@
   <br>
   <br>
   <!-- formulario -->
-  
   <!-- Create the form -->
   <div class="container">
     <div class="row formMargin">
@@ -88,7 +87,7 @@
           <h2 class="room-text">Room Details</h2>
           <div class="col s12">
             <label>How many rooms?</label>
-            <select class="browser-default">
+            <select class="browser-default" id="rooms">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -97,7 +96,7 @@
           </div>
           <div class="col s6">
             <label>How many adults?</label>
-            <select class="browser-default">
+            <select class="browser-default" id="adults">
               <option value="1">1 Adult</option>
               <option value="2">2 Adults</option>
               <option value="3">3 Adults</option>
@@ -106,12 +105,10 @@
           </div>
           <div class="col s6">
             <label>How many children?</label>
-            <select class="browser-default">
+            <select class="browser-default" id="children">
               <option value="0">0 Children</option>
               <option value="1">1 Children</option>
               <option value="2">2 Children</option>
-              <option value="3">3 Children</option>
-              <option value="4">4 Children</option>
             </select>
           </div>
 
@@ -130,13 +127,13 @@
             </p>
             <p>
               <label>
-                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <input class="with-gap" name="group2" type="radio" id="letra" />
                 <span id="texto">Habitación Matrimonial Economica</span>
               </label>
             </p>
             <p>
               <label>
-                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <input class="with-gap" name="group3" type="radio" id="letra" />
                 <span id="texto">Habitación 2Camas Economica</span>
               </label>
             </p>
@@ -145,19 +142,19 @@
           <div class="col s6">
             <p>
               <label>
-                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <input class="with-gap" name="group4" type="radio" id="letra" />
                 <span id="texto">Habitación Individual Superior</span>
               </label>
             </p>
             <p>
               <label>
-                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <input class="with-gap" name="group5" type="radio" id="letra" />
                 <span id="texto">Habitación Matrimonial Superior</span>
               </label>
             </p>
             <p>
               <label>
-                <input class="with-gap" name="group1" type="radio" id="letra" />
+                <input class="with-gap" name="group6" type="radio" id="letra" />
                 <span id="texto">Habitación 2Camas Superior</span>
               </label>
             </p>
@@ -169,9 +166,6 @@
             <input id="add-event" class="btn btn-info" type="submit" value="Reserva" />
           </div>
         </form>
-     
-
-
       <!-- termino de formulario -->
       <!-- comienzo de texto -->
       <div class="col s6">
@@ -209,18 +203,6 @@
         </div>
       </div>
     
-    <!-- termino de cards de contactos -->
-    <!-- <div class="col s12">
-      <form action="#">
-        <p id="orange"></p>
-      </form>
-      <div> -->
-        
-        <!-- <form action="#">
-          <p id="orange"></p>
-        </form>
-      </div>
-      <h4> -->
         <div class="col s6" id="info-text">
         <h4 class="card-title">Important Information for your Stay</h4>
       
@@ -276,17 +258,43 @@
   <script>
 
   </script>
-  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
-    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="/js/javascript.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <!-- termino -->
+  <script>
+    $("#add-event").on("click", function (event) {
+    event.preventDefault();
+    var checkin = moment($("#checkin").val().trim(),"MM/DD/YYYY").format("X");
+    var checkout = moment($("#checkout").val().trim(),"MM/DD/YYYY").format("X");
+    var type_rooms = []
+    var group1 = $('input[name=group1]:checked').val()
+    var group2 = $('input[name=group2]:checked').val()
+    var adult = $("#adults").val().trim();
+    var children = $("#children").val().trim();
 
-  <!-- React script tags-->
-  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-  <!-- React component tag-->
-  <script src="like_button.js"></script>
+    dabase.ref().push({
 
+    })
+    $.ajax({
+    method: "POST",
+    url: "/api/dashboard",
+    data: { checkin: checkin, checkout: checkout, rooms: rooms, adult: adult, children: children }
+    }).then(function(data) {
+      if (!data) {        
+//show error message - not a valid user
+      $(".login-error").css("display", "block");
+      } else {
+        console.log(data);
+        sessionStorage.setItem('user', JSON.stringify(data));
+        window.location.replace("/dashboard");
+      }
+    })
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+
+  
 </body>
 
 </html>
