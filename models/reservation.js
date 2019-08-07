@@ -23,14 +23,14 @@ module.exports = function (sequelize, DataTypes) {
                 }
             },
             check_in: {
-                type: 'TIMESTAMP',
+                type: "TIMESTAMP",
                 allowNull: false,
                 validate: {
                     len: [1]
                 }
             },
             check_out: {
-                type: 'TIMESTAMP',
+                type: "TIMESTAMP",
                 allowNull: false,
                 validate: {
                     len: [1]
