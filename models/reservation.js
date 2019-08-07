@@ -23,20 +23,55 @@ module.exports = function (sequelize, DataTypes) {
                 }
             },
             check_in: {
-                type: DataTypes.Date,
+                type: 'TIMESTAMP',
                 allowNull: false,
                 validate: {
                     len: [1]
                 }
             },
             check_out: {
-                type: DataTypes.Date,
+                type: 'TIMESTAMP',
                 allowNull: false,
                 validate: {
                     len: [1]
                 }
             },
             
+            single_eco: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    len: [1]
+                }
+            },
+            single_sup: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    len: [1]
+                }
+            },
+            doble_sup: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    len: [1]
+                }
+            },
+            twin_eco: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    len: [1]
+                }
+            },
+            twin_sup: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    len: [1]
+                }
+            },
             room_type: {
                 type: DataTypes.STRING,
                 allowNull: false,
@@ -58,7 +93,6 @@ module.exports = function (sequelize, DataTypes) {
                     len: [1]
                 }
             },
-    
             room_qty: {
                 type: DataTypes.INTEGER,
                 allowNull: false,

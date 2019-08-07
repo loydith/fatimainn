@@ -77,11 +77,11 @@
         
           <h2 class="date-text">Travel Dates</h2>
           <div class="col s6">
-            <label for="start-date-input" id="checkin"><i class="far fa-calendar-alt"></i>Check In</label>
+            <label for="start-date-input" id="check_in"><i class="far fa-calendar-alt"></i>Check In</label>
             <input type="date" id="start-date-input" /><br />
           </div>
           <div class="col s6">
-            <label for="end-date-input" id="checkout"><i class="far fa-calendar-alt"></i>Check Out</label>
+            <label for="end-date-input" id="check_out"><i class="far fa-calendar-alt"></i>Check Out</label>
             <input type="date" id="end-date-input" /><br />
           </div>
           <h2 class="room-text">Room Details</h2>
@@ -263,29 +263,47 @@
   <script>
     $("#add-event").on("click", function (event) {
     event.preventDefault();
-    var checkin = moment($("#checkin").val().trim(),"MM/DD/YYYY").format("X");
-    var checkout = moment($("#checkout").val().trim(),"MM/DD/YYYY").format("X");
+    var name = $("#full_name").val().trim();
+    var email = $("#email").val().trim();
+    var phone = $("#phone").val().trim();
+    var check_in = moment($("#check_in").val().trim(),"MM/DD/YYYY").format("X");
+    var check_out = moment($("#check_out").val().trim(),"MM/DD/YYYY").format("X");
     var type_rooms = []
     var group1 = $('input[name=group1]:checked').val()
     var group2 = $('input[name=group2]:checked').val()
-    var adult = $("#adults").val().trim();
+    var group3 = $('input[name=group3]:checked').val()
+    var group4 = $('input[name=group4]:checked').val()
+    var group5 = $('input[name=group5]:checked').val()
+    var group6 = $('input[name=group6]:checked').val()
+    var rooms = $("#rooms").val().trim();
+    var adults = $("#adults").val().trim();
     var children = $("#children").val().trim();
-
-    dabase.ref().push({
-
-    })
     $.ajax({
     method: "POST",
     url: "/api/dashboard",
-    data: { checkin: checkin, checkout: checkout, rooms: rooms, adult: adult, children: children }
+    data: { 
+            name: name,
+            email: email,
+            phone: phone,
+            check_in: check_in, 
+            check_out: check_out, 
+            group1: group1,
+            group2: group2,
+            group3: group3,
+            group4: group4,
+            group5: group5,
+            group6: group6,
+            adults: adults, 
+            children: children }
     }).then(function(data) {
+      console.log("success", data);
       if (!data) {        
 //show error message - not a valid user
-      $(".login-error").css("display", "block");
+      //$(".login-error").css("display", "block");
       } else {
         console.log(data);
         sessionStorage.setItem('user', JSON.stringify(data));
-        window.location.replace("/dashboard");
+        // window.location.replace("/dashboard");
       }
     })
 });
