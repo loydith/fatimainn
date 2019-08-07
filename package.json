@@ -24,6 +24,7 @@
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
+    "express-session-sequelize": "^2.1.0",
     "fs": "0.0.1-security",
     "install": "^0.13.0",
     "morgan": "^1.9.1",
