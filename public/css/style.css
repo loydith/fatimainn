@@ -73,6 +73,7 @@ p{
 #contactanos {
   border: .8px solid orange;
   margin-left: 3%;
+  padding-right: 3%;
 }
 #reserve-form {
   border: .8px solid orange;
@@ -187,7 +188,7 @@ h5{
   font-size: 3em;
   color: rgb(26, 145, 26);
 }
-.room-text, .date-text, .roomtypes-text {
+.room-text, .date-text, .roomtypes-text, .user-text {
   text-align: center;
   font-size: 2em;
   color: rgb(197, 172, 141);
