@@ -17,17 +17,6 @@ body{
     
 }
 
-.container {
-  width: 100%;
-  max-width:initial;
-}
-.container > .row {
-  margin: 0;
-}
-.container > .row > .col {
-  padding: 0;
-}
-
 #mobile-demo{
   color: black;
 }
