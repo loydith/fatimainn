@@ -100,9 +100,13 @@ app.get('/login', (req, res) =>{
 app.get('/signup', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'signup.html'));
 });
-
-
-  
+app.get('/dashboard', (req, res) =>{
+    if (req.user) {
+        res.sendFile(path.join(__dirname, 'views', 'dashboard.html'));
+	} else {
+        res.sendFile(path.join(__dirname, 'views', 'login.html'));
+	}
+});
   // SESSION SETUP
   if (app.get("env") === "production") {
     app.set("trust proxy", 1); // trust first proxy
