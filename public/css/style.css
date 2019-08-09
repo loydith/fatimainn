@@ -17,6 +17,17 @@ body{
     
 }
 
+.container {
+  width: 100%;
+  max-width:initial;
+}
+.container > .row {
+  margin: 0;
+}
+.container > .row > .col {
+  padding: 0;
+}
+
 #mobile-demo{
   color: black;
 }
@@ -206,6 +217,14 @@ h5{
 
 li {
   font-size: 12.6px;
+}
+.modal-footer {
+  justify-content: flex-end;
+  display: flex;
+}
+.modal-close {
+  color: blue;
+  text-decoration: underline;
 }
 
 /* dashboard */
