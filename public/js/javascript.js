@@ -9,4 +9,6 @@ $(document).ready(function(){
 // modal
 $(document).ready(function(){
   $('.modal').modal();
+  $('.carousel').carousel();
+  
 });

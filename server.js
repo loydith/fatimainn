@@ -71,6 +71,9 @@ app.get('/', (req, res) =>{
 app.get('/index', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
+app.get('/explore', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'views', 'explore.html'));
+});
 app.get('/auditorio', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'auditorio.html'));
 });
@@ -101,6 +104,7 @@ app.get('/signup', (req, res) =>{
     res.sendFile(path.join(__dirname, 'views', 'signup.html'));
 });
 app.get('/dashboard', (req, res) =>{
+    console.log("user", req.user);
     if (req.user) {
         res.sendFile(path.join(__dirname, 'views', 'dashboard.html'));
 	} else {

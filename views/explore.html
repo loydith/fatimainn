@@ -1,288 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Explore | Fatima Inn</title>
-        
-        <!-- bootstrap
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-       <!-- materialize -->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" type="text/css "href="style.css">
-        <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="javascript.js"></script>
-    
-    </head>
-    <body>
-    <!-- INDEX -->
-    <div class="container">
-    <!-- Dropdown Structure  web-->
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a href="mediodia">Media día</a></li>
-       <li><a href="diacompleto">Día Completo</a></li>
-       <li><a href="paqueteturistico">Paquete Turístico</a></li>
-      <li class="divider"></li>
-      <li><a id="salir" href="#!">Salir</a></li>
-    </ul>
-    <!-- Dropdown Structure  mobile-->
-    <ul id="dropdown2" class="dropdown-content">
-      <li><a href="mediodia">Media día</a></li>
-       <li><a href="diacompleto">Día Completo</a></li>
-       <li><a href="paqueteturistico">Paquete Turístico</a></li>
-      <li class="divider"></li>
-      <li><a id="salir" href="#!">Salir</a></li>
-    </ul>
-    <!-- The new nav -->
-    <nav id="nav-head">
-      <div class="nav-wrapper">
-          <img src="images/Logo-FatimaInn.png" width="200" height="120" class="brand-logo">
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a id="inicio" href="index">Inicio</a></li>
-             <li><a id="habitaciones" href="habitaciones">Habitaciones</a></li>
-             <li><a id="contactos" href="contactos">Contáctenos</a></li>
-             <li><a id="auditorio" href="auditorio">Auditorio</a></li>
-             <li><a id="explore" href="/login">Login</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conference Room | Fatima Inn</title>
+    <!-- materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+<!-- Explore -->
+
+  <!-- Dropdown Structure  web-->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="/mediodia">Media día</a></li>
+     <li><a href="/diacompleto">Día Completo</a></li>
+     <li><a href="/paqueteturistico">Paquete Turístico</a></li>
+    <li class="divider"></li>
+    <li><a id="salir" href="#!">Salir</a></li>
+  </ul>
+  <!-- Dropdown Structure  mobile-->
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="/mediodia">Media día</a></li>
+     <li><a href="/diacompleto">Día Completo</a></li>
+     <li><a href="/paqueteturistico">Paquete Turístico</a></li>
+    <li class="divider"></li>
+    <li><a id="salir" href="#!">Salir</a></li>
+  </ul>
+  <!-- The new nav[ data-target ==> dropdown1] -->
+  <nav id="nav-head">
+    <div class="nav-wrapper">
+      <img src="/images/Logo-FatimaInn.png" height="80" class="brand-logo">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+          <li><a id="inicio" href="/index">Inicio</a></li>
+          <li><a id="explore" href="/explore">Explore</a></li>
+           <li><a id="habitaciones" href="/habitaciones">Habitaciones</a></li>
+           <li><a id="contactos" href="/contactos">Contáctenos</a></li>
+           <li><a id="auditorio" href="/auditorio">Auditorio</a></li>
+           <li><a id="explore" href="/login">Login</a></li>
          <li><a id="explore" href="/signup">Sign Up</a></li>
-      <!-- Dropdown Trigger -->
-            <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones">Reserva</a></li>
-        </ul>
-      </div>
-    </nav>
-    
-    <ul class="sidenav" id="mobile-demo">
-        <li><a id="inicio" href="index">Inicio</a></li>
-        <li><a id="habitaciones" href="habitaciones">Habitaciones</a></li>
-        <li><a id="contactos" href="contactos">Contáctenos</a></li>
-        <li><a id="auditorio" href="auditorio">Auditorio</a></li>
-        <li><a id="explore" href="/login">Login</a></li>
+         <li><a id="explore" href="/dashboard">Dashboard</a></li>
+         <!-- Dropdown Trigger -->
+          <li><a  id="tour" class="dropdown-trigger" href="#" data-target="dropdown1">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- data-target ==> dropdown2 -->
+  <ul class="sidenav" id="mobile-demo">
+      <li><a id="inicio" href="/index">Inicio</a></li>
+      <li><a id="explore" href="/explore">Explore</a></li>
+      <li><a id="habitaciones" href="/habitaciones">Habitaciones</a></li>
+      <li><a id="contactos" href="/contactos">Contáctenos</a></li>
+      <li><a id="auditorio" href="/auditorio">Auditorio</a></li>
+      <li><a id="explore" href="/login">Login</a></li>
          <li><a id="explore" href="/signup">Sign Up</a></li>
-    <!-- Dropdown Trigger -->
-       <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
-       <li><a id="reservaciones" class="waves-effect waves-light btn" href="reservaciones">Reserva</a></li>
-    </ul>
-    <br>
-    
-      <!-- Slider Images -->
-<div class="slider">
-    <ul class="slides">
-      <li>
-        <img src="images/Reception-HotelFatimaInn9.jpg">
-      </li>
-      <li>
-        <img src="images/HIndividual1.jpg"> 
-      </li>
-      <li>
-        <img src="images/HIndividual2.jpg"> 
-      </li>
-      <li>
-        <img src="images/HIndividual3.jpg"> 
-      </li>
-      <li>
-        <img src="images/HIndividual4.jpg"> 
-      </li>
-      <li>
-        <img src="images/HMatrimonial2.JPG"> 
-      </li>
-      <li>
-        <img src="images/HMatrimonial3.JPG"> 
-      </li>
-      <li>
-        <img src="images/HMatrimonial4.JPG"> 
-      </li>
-      <li>
-        <img src="images/Hab2Camas1.JPG"> 
-      <li>
-      <li>
-          <img src="images/Hab2Camas2.JPG"> 
-      </li>
-      <li>
-          <img src="images/Restroom-HotelFatimaInn.jpg"> 
-      </li>
-      <li>
-          <img src="images/Restroom1-HotelFatimaInn.jpg"> 
-      </li>
-      <li>
-          <img src="images/Reception-HotelFatimaInn.jpg"> 
-      </li>
-      <li>
-          <img src="images/Reception-HotelFatimaInn2.jpg"> 
-      </li>
-      <li>
-          <img src="images/ComedorPrincipal-HotelFatimaInn1.jpg"> 
-      </li>
-      <li>
-          <img src="images/ComedorPrincipal-HotelFatimaInn2.jpg"> 
-      </li>
-      <li>
-          <img src="images/DesayunoCecina-FatimaInn.jpg"> 
-      </li>
-      
-    </ul>
-  </div>
-<!-- terminado el slide -->
-    <!--create cards right -->
-<!-- <div class="row">
-  <div class="col s4" id = "right">
-    <h3 class="header">Habitaciones y Precios</h3>
-    <div id = "hotel-results">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="images/HIndividual1.jpg">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>• WiFi gratis
-              • TV de pantalla plana
-              • Ducha  
-              • TV  
-              • Teléfono  
-              • Artículos de aseo gratis  
-              • Ventilador  
-              • Canales por cable 
-              •  Baño privado
-              • Bañera o ducha  
-              • Servicio de despertador  
-              • Toallas  
-              • Toda la unidad situada en la planta baja  
-              • Papel higiénico</p>
-        </div>
-        <div class="card-action">
-          <a href="habitaciones">Más</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div> -->
-<!-- create cards right -->
-  <!-- <div class="col s4" id = "Left">
-    <h3 class="header">Locación</h3>
-    <div id="events-results">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="images/HMatrimonial3.JPG">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-            <p>
-              • WiFi gratis
-              • TV de pantalla plana
-              • Ducha  
-              • TV  
-              • Teléfono  
-              • Artículos de aseo gratis  
-              • Ventilador  
-              • Canales por cable 
-              •  Baño privado
-              • Bañera o ducha  
-              • Servicio de despertador  
-              • Toallas  
-              • Toda la unidad situada en la planta baja  
-              • Papel higiénico</p>
-        </div>
-        <div class="card-action">
-          <a href="habitaciones">Más</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Dropdown Trigger -->
+     <li><a  id="tourMobile" class="dropdown-trigger" href="#!" data-target="dropdown2">Tours<i class="material-icons right">arrow_drop_down</i></a></li>
+     <li><a id="reservaciones" class="waves-effect waves-light btn" href="/reservaciones">Reserva</a></li>
+  </ul>
+
+ <!-- divider -->
+ <form action="#">
+  <p  id="orange"></p>
+</form>
+<h5 id="card"> Fatima Inn</h5>
+<form action="#">
+    <p  id="orange"></p>
+  </form>
+
+<!-- terminado -->
+<div class="container">
+    • Fatima Inn. fue creada para pasajeros Ejecutivos y Turistas en general.
+    Tiene una ubicacion privilegiada en el Centro de la Ciudad de Tarapoto a 
+    solo media cuadra de la Plaza de Armas que permite a nuestros huéspedes 
+    tener un desplazamiento seguro, placentero y libre de estres dentro de la ciudad.  
+    El edificio cuenta con 5 pisos y su infraestructura moderna y seguridad nos hace 
+    pioneros en cubrir muchas reservas durante todo el año. Además, contamos con sala 
+    de recepcion elegante y LapTops para su uso durante su estadia. Tambien, contamos con 
+    un amplio comedor principal para el Desayuno Continental en las mañanas.
+    Para la seguirdad de su estadia contamos en las areas comunes camaras de seguridad las 
+    24 horas. Asi mismo, informarles que todo los años actualizamos nuestros ambientes 
+    con el proposito de darles un servicio de calidad y hacemos que los huéspedes.<br> 
+    • Fatima Inn, cuenta ademas con 2 amplios Salas de Conferencia con infraestuctura moderna
+    disponibles para sus eventos, charlas, capacitaciones, entrenamientos, etc. solo debe contactarnos las 24 horas 
+    horas para realizar su reserva.
 </div>
-</div> -->
+  
+<!-- start carousel -->
+<div class="carousel">
+    <a class="carousel-item" href="#one"><img src="/images/Reception-HotelFatimaInn.jpg"></a>
+    <a class="carousel-item" href="#two"><img src="/images/Reception-HotelFatimaInn1.jpg"></a>
+    <a class="carousel-item" href="#three"><img src="/images/Reception-HotelFatimaInn2.jpg"></a>
+    <a class="carousel-item" href="#four"><img src="/images/Reception-HotelFatimaInn3.jpg"></a>
+    <a class="carousel-item" href="#five"><img src="/images/Reception-HotelFatimaInn4.jpg"></a>
+    <a class="carousel-item" href="#six"><img src="/images/ComedorPrincipal-HotelFatimaInn1.jpg"></a>
+    <a class="carousel-item" href="#seven"><img src="/images/ComedorPrincipal-HotelFatimaInn2.jpg"></a>
+    <a class="carousel-item" href="#eight"><img src="/images/DesayunoCecina-FatimaInn.jpg"></a>
+    <a class="carousel-item" href="#nine"><img src="/images/DesayunoGourmet-FatimaInn1.jpg"></a>
+    <a class="carousel-item" href="#ten"><img src="/auditorios/ConferenceRoom-HotelFatimaInn1.jpg"></a>
+    <a class="carousel-item" href="#eleven"><img src="/auditorios/ConferenceRoom-HotelFatimaInn2.jpg"></a>
+  </div>
 
-<!-- create cards right -->
-<!-- <div class="row">
-  <div class="col s4" id = "right">
-    <h3 class="header">Nuestra Propiedad</h3>
-    <div id = "hotel-results">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="images/Hab2Camas1.JPG">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>• WiFi gratis
-              • TV de pantalla plana
-              • Ducha  
-              • TV  
-              • Teléfono  
-              • Artículos de aseo gratis  
-              • Ventilador  
-              • Canales por cable 
-              •  Baño privado
-              • Bañera o ducha  
-              • Servicio de despertador  
-              • Toallas  
-              • Toda la unidad situada en la planta baja  
-              • Papel higiénico</p>
-        </div>
-        <div class="card-action">
-          <a href="habitaciones">Más</a>
-        </div>
-      </div>
+<!-- footer -->
+<footer class="page-footer" id="footer">
+  <div class="footer-copyright">
+    <div class="container left">
+        © 2019 Copyright by LoyDesign 
+        <a class="grey-text text-lighten-4 right" href="#!">
+          Jr. San Martín N° 127, Tarapoto | (51) 042 566 359 | +1 804 477 5524 | 942 889 047 | 986 585 921<br>
+          ventas@fatimacamilainn.com | @fatimainnhotel
+          </a>
     </div>
   </div>
-  </div> -->
-<!-- create cards right -->
-  <!-- <div class="col s6" id = "Left">
-    <h3 class="header">Sala de Conferencia</h3>
-    <div id="events-results">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="images/Auditorio2-FatimaInnHotel.jpg">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-            <p>• WiFi gratis
-                • TV de pantalla plana
-                • Ducha  
-                • TV  
-                • Teléfono  
-                • Artículos de aseo gratis  
-                • Ventilador  
-                • Canales por cable 
-                • Baño privado
-                • Bañera o ducha  
-                • Servicio de despertador  
-                • Toallas  
-                • Toda la unidad situada en la planta baja  
-                • Papel higiénico</p>
-        </div>
-        <div class="card-action">
-          <a href="habitaciones">Más</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div> -->
-<!-- terminado las cards -->
-  
-    
-
-      <!-- footer -->
-    <footer class="page-footer" id="footer">
-        <div class="footer-copyright">
-          <div class="container">
-              © 2019 Copyright by LoyDesign 
-              <a class="grey-text text-lighten-4 right" href="#!">
-                Jr. San Martín N° 127, Tarapoto | (51) 042 566 359 | +1 804 477 5524 | 942 889 047 | 986 585 921<br>
-                ventas@fatimacamilainn.com | @fatimainnhotel
-                </a>
-          </div>
-        </div>
-      </footer>
-    </div>  
+</footer>  
 
 
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="javascript.js"></script>
-  
-    
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/javascript.js"></script>
+
+
 </body>
 </html>
