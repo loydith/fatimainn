@@ -229,7 +229,11 @@ li {
 }
 
 .container.width {
-  width: 50%;
+  width: 75%;
+}
+.carousel {
+  height: 200px;
+  margin-top: 4%;
 }
 
 /* dashboard */
