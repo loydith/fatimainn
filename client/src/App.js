@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
-import Card from './Card';
+import Card from './components/IndexCard/Card';
 import Footer from './Footer';
 import Slider from './Slider';
 import Explore from './Explore';
