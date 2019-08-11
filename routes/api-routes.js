@@ -1,4 +1,6 @@
 // Requiring our models
+var express = require("express");
+const router = express.Router();
 var db = require("../models");
 
 // Routes
@@ -68,3 +70,4 @@ module.exports = function(app) {
     });
   });
 };
+module.exports = router;
