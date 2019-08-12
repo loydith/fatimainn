@@ -38,8 +38,8 @@ if (process.env.NODE_ENV === "test") {
 // email, subject, text
 app.post('/email', (req, res) => {
     //send email here
-
-    const { email, subject, text } = req.body;
+   
+    const {email, subject, text} = req.body;
     console.log('Data: ', req.body);
     sendMail(email, subject, text, function (err, data) {
         if (err) {
@@ -61,8 +61,10 @@ if (app.get("env") === "production") {
 // Routes
 // require("./routes/api-routes")(app);
 const htmlRoutes = require("./routes/html-routes");
+const apiRoutes = require("./routes/api-routes");
 const auth = require('./routes/auth');
 app.use('/', htmlRoutes);
+app.use('/', apiRoutes);
 app.use('/api/', auth);
 db.sequelize.sync({ force: true }).then(function () {
     app.listen(PORT, function () {

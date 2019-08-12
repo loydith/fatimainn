@@ -1,5 +1,4 @@
-import React from 'react';
-import "../../index.css";
+import React, { Component } from 'react';
 function Contact() {
     return (
     <div class="container">
