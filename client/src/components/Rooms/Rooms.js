@@ -2,6 +2,10 @@ import React from 'react';
 function Rooms() {
   return (
 <div>
+
+<form action="#">
+      <p  id="roomLine"></p>
+  </form>
   <div className="row" id="room-div">
         <div className="col s4" id = "right">
           <img src="/images/HIndividual1.jpg" height="200"/>
@@ -363,6 +367,7 @@ function Rooms() {
           <div className="col s4" id = "right">
             <h1 className="card-title">Más</h1>
           </div>
+          <a data-target="modal4" className="btn modal-trigger btn-floating btn-large waves-effect waves-light orange" ><i className="material-icons">add</i></a>
 </div>
 </div>
   );
