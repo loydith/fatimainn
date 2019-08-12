@@ -64,9 +64,9 @@ const htmlRoutes = require("./routes/html-routes");
 const apiRoutes = require("./routes/api-routes");
 const auth = require('./routes/auth');
 app.use('/', htmlRoutes);
-app.use('/', apiRoutes);
+app.use('/reservations', apiRoutes);
 app.use('/api/', auth);
-db.sequelize.sync({ force: true }).then(function () {
+db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
         console.log("App listening on PORT " + PORT);
     });

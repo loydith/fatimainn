@@ -5,14 +5,9 @@ import axios from 'axios';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
-import ContactCard from './components/ContactCard/ContactCard';
 import Rooms from './components/Rooms/Rooms';
-import Modal from './components/Modal/Modal';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
-import ConferenceRoom from './components/ConferenceRoom/ConferenceRoom';
-import SlideConference from './components/SlideConference/SlideConference';
-
 // Pages
 import Auditorio from './pages/Auditorio';
 import Dashboard from './pages/Dashboard';
@@ -24,30 +19,67 @@ import PaqueteTuristico from './pages/PaqueteTuristico';
 import Reservactiones from './pages/Reservaciones';
 import Salir from './pages/Salir';
 import './App.css';
-function App() {
-  return (
-    <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/auditorio" component={Auditorio} />
-          <Route exact path="/contactos" component={Contact} />
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/diacompleto" component={DiaCompleto} />
-          <Route exact path="/explore" component={Explore} />
-          <Route exact path="/habitaciones" component={Rooms} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/mediodia" component={MedioDia} />
-          <Route exact path="/paqueteturistico" component={PaqueteTuristico} />
-          <Route exact path="/reservaciones" component={Reservactiones} />
-          <Route exact path="/salir" component={Salir} />
-          <Route exact path="/signup" component={Signup} />
-        </Switch>
-        <Footer/>
-      </div>
+import Booking from './components/Booking/Booking';
+export default class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+      name: '',
+      subject: '',
+      email: '',
+      phone: '',
+      message: ''
+    }
+  }
+  handleEmail = (email) => {
+    console.log(email);
+    // axios.post('/email', data).then(res => {
+    //   console.log('EMAIL RESPONSE', res);
+    // })
+  }
+  handleLogin = (user) => {
+    console.log(user);
+    axios.post('/api/login', user).then(res => {
+      console.log('Login RESPONSE', res);
+    });
+  }
+  handleReservaciones = (reservation) => {
+    console.log(reservation)
+    axios.post('/reservations', reservation).then(res => {
+      console.log('Reservations', res);
+    })
+  }
+  handleSignup = (user) => {
+    console.log(user);
+    axios.post('/api/signup', user).then(res => {
+      console.log('SIGN UP RESPONSE', res);
+    });
+  }
+  render() {
+    return (
+      <Router>
+        <div>
+          <Nav />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/auditorio" component={Auditorio} />
+            <Route exact path="/contactos" component={() => (<Contact handleChange={this.handleChange} handleEmail={this.handleEmail} />)} />
+            <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/diacompleto" component={DiaCompleto} />
+            <Route exact path="/explore" component={Explore} />
+            <Route exact path="/habitaciones" component={Rooms} />
+            <Route exact path="/login" component={() => (<Login handleChange={this.handleChange} handleLogin={this.handleLogin} />)} />
+            <Route exact path="/mediodia" component={MedioDia} />
+            <Route exact path="/paqueteturistico" component={PaqueteTuristico} />
+            <Route exact path="/reservaciones" component={() => (<Booking handleChange={this.handleChange} handleReservaciones={this.handleReservaciones} />)} />
+            <Route exact path="/salir" component={Salir} />
+            <Route exact path="/signup" component={() => (<Signup handleChange={this.handleChange} handleSignup={this.handleSignup} />)} />
+          </Switch>
+          <Footer />
+        </div>
       </Router>
-  );
+    );
+  }
 }
-
-export default App;

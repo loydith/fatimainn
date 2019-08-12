@@ -1,8 +1,10 @@
 import React from 'react';
-function Rooms() {
+function Rooms(props) {
+  const handleReservations = (event) => {
+    event.preventDefault();
+  }
   return (
 <div>
-
 <form action="#">
       <p  id="roomLine"></p>
   </form>
