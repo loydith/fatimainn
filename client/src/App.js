@@ -13,6 +13,7 @@ import Modal from './components/Modal/Modal';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import Halfday from './components/Halfday/Halfday';
+import IndexCard from './components/IndexCard/Card'
 import Fullday from './components/Fullday/Fullday';
 import ConferenceRoom from './components/ConferenceRoom/ConferenceRoom';
 import SlideConference from './components/SlideConference/SlideConference';
@@ -25,8 +26,7 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <SlideConference/>
-    <ConferenceRoom/>
+    <Booking/>
       <Footer/>
     </div>
   );

@@ -71,13 +71,20 @@ font-size:rgb(56, 48, 48);
 border: .8px solid orange;
 border-radius: 15px;
 }
+#roomLine {
+border: .8px solid orange;
+border-radius: 15px;
+margin-top: 3%;
+}
 #contactanos {
 border: .8px solid orange;
 margin-left: 3%;
 padding-right: 3%;
+margin-top: 3%;
 }
 #reserve-form {
 border: .8px solid orange;
+margin-top: 3%;
 }
 
 .card-title {
@@ -162,14 +169,19 @@ overflow: hidden;
 
 .buttonHolder { 
 text-align: center;
+margin-bottom: 4%;
 }
 
 #links {
 margin-left: 3%;
+/* margin-top: 2.5%; */
+}
+
+.topCard {
+  margin-top: 4%;
 }
 #room-div {
-margin-left: 5em;
-margin-right: -25em;
+/* margin-top: 3%; */
 
 }
 #login-form, #signup-form {
@@ -234,6 +246,10 @@ width: 75%;
 .carousel {
 height: 200px;
 margin-top: 4%;
+}
+
+.container.left {
+  text-align: left;
 }
 
 /* dashboard */
