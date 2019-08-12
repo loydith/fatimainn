@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser'); //hide the ids
 const SessionStore = require('express-session-sequelize')(session.Store);//create the store
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const db = require("./models");
 const passport = require('./passport/index.js');
 // Satitic folder
