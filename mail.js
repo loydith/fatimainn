@@ -9,8 +9,8 @@ const sendMail = (email, subject, text, cb) => {
     const auth ={
         // server: 'gmail',
         auth: {
-            api_key: '5ace22a142a886449aec2ce0074d5fb5-73ae490d-e2492fb7',
-            domain: 'https://api.mailgun.net/v3/sandbox070fc28bd635484db357901d06e0ad51.mailgun.org',
+            api_key: '',
+            domain: '',
             // api_key: process.env.EMAIL,
             // domain: process.env.PASSWORD
             
