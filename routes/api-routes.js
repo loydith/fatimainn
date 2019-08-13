@@ -1,70 +1,53 @@
 // Requiring our models
+var express = require("express");
+const router = express.Router();
 var db = require("../models");
-
-// Routes
-// =============================================================
-module.exports = function(app) {
-
-  // GET route for getting all of the posts
-  app.get("/api/posts", function(req, res) {
-    var query = {};
-    if (req.query.id) {
-      query.ReservationId = req.query.id;
-    }
-    // Here we add an "include" property to our options in our findAll query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Author
-    db.Post.findAll({
-      where: query,
-      include: [db.Reservation]
-    }).then(function(dbPost) {
-      res.json(dbPost);
+  // GET route for getting all of the reservations
+  router.get("/", function(req, res) {
+    db.Reservation.findAll({
+    }).then(function(dbReservation) {
+      res.json(dbReservation);
     });
   });
-
-  // Get route for retrieving a single post
-  app.get("/api/posts/:id", function(req, res) {
-    // Here we add an "include" property to our options in our findOne query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Author
-    db.Post.findOne({
+  // Get route for retrieving a single booking
+  router.get("/:id", function(req, res) {
+    
+    db.Reservation.findOne({
       where: {
         id: req.params.id
       },
       include: [db.Reservation]
-    }).then(function(dbPost) {
-      res.json(dbPost);
+    }).then(function(dbReservation) {
+      res.json(dbReservation);
     });
   });
-
-  // POST route for saving a new post
-  app.post("/api/posts", function(req, res) {
-    db.Post.create(req.body).then(function(dbPost) {
-      res.json(dbPost);
+  // POST route for saving a new booking
+  router.post("/", function(req, res) {
+    console.log(req.body);
+    db.Reservation.create(req.body).then(function(dbReservation) {
+      res.json(dbReservation);
     });
   });
-
-  // DELETE route for deleting posts
-  app.delete("/api/posts/:id", function(req, res) {
-    db.Post.destroy({
+  // DELETE route for deleting booking
+  router.delete("/:id", function(req, res) {
+    db.Reservation.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbPost) {
-      res.json(dbPost);
+    }).then(function(dbReservation) {
+      res.json(dbReservation);
     });
   });
-
-  // PUT route for updating posts
-  app.put("/api/posts", function(req, res) {
-    db.Post.update(
+  // PUT route for updating booking
+  router.put("/", function(req, res) {
+    db.Reservation.update(
       req.body,
       {
         where: {
           id: req.body.id
         }
-      }).then(function(dbPost) {
-      res.json(dbPost);
+      }).then(function(dbReservation) {
+      res.json(dbReservation);
     });
   });
-};
+module.exports = router;

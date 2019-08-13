@@ -9,8 +9,8 @@ const sendMail = (email, subject, text, cb) => {
     const auth ={
         // server: 'gmail',
         auth: {
-            api_key: '772cf054191f6594271c89e5f14bb947-f877bd7a-c255bae3',
-            domain: 'https://api.mailgun.net/v3/sandbox3e75a5192d664c0fbd44591bb919bc54.mailgun.org',
+            api_key: '5ace22a142a886449aec2ce0074d5fb5-73ae490d-e2492fb7',
+            domain: 'https://api.mailgun.net/v3/sandbox070fc28bd635484db357901d06e0ad51.mailgun.org',
             // api_key: process.env.EMAIL,
             // domain: process.env.PASSWORD
             
@@ -19,8 +19,8 @@ const sendMail = (email, subject, text, cb) => {
     const transporter = nodemailer.createTransport(mailGun(auth));
     const mailOptions = {
         from: email, // sender address
-        from: 'ventas@fatimacamilainn.com',
-        to: 'ventas@fatimacamilainn.com', // list of receiver
+        from: 'fatimasmu2019@gmail.com',
+        to: 'fatimasmu2019@gmail.com', // list of receiver
         subject: 'Testing', // Subject line
         text // plain text body
         

@@ -13,26 +13,12 @@ router.get('/user', (req, res, next) => {
 	}
 })
 
-router.post(
-	'/login',
-	function(req, res, next) {
-		console.log('body',req.body)
-		console.log('================')
-		next()
-	},
-	passport.authenticate('local'),
-	(req, res) => {
-        db.User.findOne({
-            where: {
-                username:req.user.username
-            }
-        }).then((dbUser) => {
-            res.json({ userId: dbUser.dataValues.id, name:dbUser.dataValues.username })  
-        })
-	}
-)
+// Post request handling route for login
+router.post('/login', passport.authenticate('local'), (req, res)=>{
+	res.json(req.user);
+})
 
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
 	if (req.user) {
 		req.session.destroy(()=>{
             res.clearCookie('connect.sid') // clean up!
@@ -44,7 +30,7 @@ router.post('/logout', (req, res) => {
 })
 
 router.post('/signup', (req, res) => {
-	const { username, password } = req.body
+	console.log(req.body)
 	// ADD VALIDATION
 	db.User.create(req.body).then((dbUser) => {
         res.json(dbUser)

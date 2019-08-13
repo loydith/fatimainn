@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser'); //hide the ids
 const SessionStore = require('express-session-sequelize')(session.Store);//create the store
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const db = require("./models");
 const passport = require('./passport/index.js');
 // Satitic folder
@@ -38,8 +38,8 @@ if (process.env.NODE_ENV === "test") {
 // email, subject, text
 app.post('/email', (req, res) => {
     //send email here
-
-    const { email, subject, text } = req.body;
+   
+    const {email, subject, text} = req.body;
     console.log('Data: ', req.body);
     sendMail(email, subject, text, function (err, data) {
         if (err) {
@@ -61,10 +61,17 @@ if (app.get("env") === "production") {
 // Routes
 // require("./routes/api-routes")(app);
 const htmlRoutes = require("./routes/html-routes");
+const apiRoutes = require("./routes/api-routes");
 const auth = require('./routes/auth');
 app.use('/', htmlRoutes);
+app.use('/reservations', apiRoutes);
 app.use('/api/', auth);
-db.sequelize.sync({ force: true }).then(function () {
+db.sequelize.sync().then(function () {
+    db.User.create({
+        username: 'admin',
+        password: 'admin',
+        adminUser: true
+    })
     app.listen(PORT, function () {
         console.log("App listening on PORT " + PORT);
     });
