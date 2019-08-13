@@ -67,6 +67,11 @@ app.use('/', htmlRoutes);
 app.use('/reservations', apiRoutes);
 app.use('/api/', auth);
 db.sequelize.sync().then(function () {
+    db.User.create({
+        username: 'admin',
+        password: 'admin',
+        adminUser: true
+    })
     app.listen(PORT, function () {
         console.log("App listening on PORT " + PORT);
     });

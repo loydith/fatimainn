@@ -13,21 +13,12 @@ router.get('/user', (req, res, next) => {
 	}
 })
 
-router.post(
-	'/login',
-	(req, res) => {
-		console.log(req.body);
-        db.User.findOne({
-            where: {
-                username:req.body.username
-            }
-        }).then((dbUser) => {
-            res.json(dbUser)  
-        })
-	}
-)
+// Post request handling route for login
+router.post('/login', passport.authenticate('local'), (req, res)=>{
+	res.json(req.user);
+})
 
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
 	if (req.user) {
 		req.session.destroy(()=>{
             res.clearCookie('connect.sid') // clean up!
