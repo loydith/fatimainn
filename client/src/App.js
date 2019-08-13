@@ -9,7 +9,7 @@ import Rooms from './components/Rooms/Rooms';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import ConferenceRoom from './components/ConferenceRoom/ConferenceRoom';
-import SlideConfeence from './components/SlideConference/SlideConference';
+
 
 
 // Pages

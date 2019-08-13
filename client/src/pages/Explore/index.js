@@ -1,8 +1,9 @@
 import React from 'react';
-import Carousel from '../../components/Carousel'
+import Carousel from '../../components/Carousel/Carousel'
 function Explore() {
   return (
     <div className="container width">
+      <Carousel/>
       <h5 id="card">Fatima Inn</h5>
       <br />
       Fatima Inn. fue creada para pasajeros Ejecutivos y Turistas en general.
@@ -19,8 +20,8 @@ function Explore() {
       Fatima Inn, cuenta ademas con 2 amplios Salas de Conferencia con infraestuctura moderna
       disponibles para sus eventos, charlas, capacitaciones, entrenamientos, etc. solo debe contactarnos las 24 horas
       horas para realizar su reserva.
-    <script type='text/javascript' src='https://darksky.net/widget/default/-6.4877,-76.3599/us12/es.js?width=100%&height=350&title=Tarapoto, Peru&textColor=333333&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Arial&customFont=&units=us&htColor=333333&ltColor=2280cf&displaySum=yes&displayHeader=yes'></script>
-
+    {/* <script type='text/javascript' src='https://darksky.net/widget/default/-6.4877,-76.3599/us12/es.js?width=100%&height=350&title=Tarapoto, Peru&textColor=333333&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Arial&customFont=&units=us&htColor=333333&ltColor=2280cf&displaySum=yes&displayHeader=yes'></script> */}
+    
     </div>);
 }
 export default Explore;

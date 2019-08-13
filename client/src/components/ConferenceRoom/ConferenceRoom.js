@@ -1,7 +1,9 @@
 import React from 'react';
+import SlideConference from '../SlideConference/SlideConference';
 function ConferenceRoom() {
     return (
 <div>
+  <SlideConference/>
 <form action="#"><p  id="orange"></p></form>
 <div className="row" id="room-div">
     <div className="col s4" id = "right">
