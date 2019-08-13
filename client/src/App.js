@@ -84,8 +84,8 @@ export default class App extends React.Component {
                 <Home />
                 )
             )} />
-            <Route exact path="/ConferenceRoom" component={ConferenceRoom} />
-            {/* <Rout exact path="/SlideConference" component={SlideConfeence}/> */}
+            <Route exact path="/Index" component={Home} />
+            <Route exact path="/Auditorio" component={ConferenceRoom} />
             <Route exact path="/contactos" component={() => (<Contact handleChange={this.handleChange} handleEmail={this.handleEmail} />)} />
             <Route exact path="/dashboard" component={() => (this.state.isAdmin ? (<Dashboard/>) : (<Redirect to="/" />))} />
             <Route exact path="/diacompleto" component={DiaCompleto} />
