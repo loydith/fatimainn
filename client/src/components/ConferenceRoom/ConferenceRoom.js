@@ -13,7 +13,7 @@ function ConferenceRoom() {
       
         <h1 className="size-override">Auditorio Económica</h1>
         <p>• Ventilador<br/>
-        • 02 Micrófonos Inalambr/ico<br/>
+        • 02 Micrófonos Inalambrico<br/>
         • WiFi gratis<br/>
         • 01 Equipo de audio y sonido<br/>
         •	01 Laptop Para Expositor<br/></p>
@@ -42,7 +42,7 @@ function ConferenceRoom() {
         <div className="col s4" id = "right">
             <h1 className="size-override">Auditorio Superior</h1>
             <p>• Aire Acondicionado<br/>
-            • 02 Micrófonos Inalambr/ico<br/>
+            • 02 Micrófonos Inalambrico<br/>
             • WiFi gratis<br/>
             • 01 Equipo de audio y sonido<br/>
             •	01 Laptop Para Expositor<br/></p>
@@ -75,9 +75,9 @@ function ConferenceRoom() {
             <img src="/images/Coffebreak.png" height="220"/>
         </div>
         <div className="col s4" id = "right">
-            <h1 className="size-override">Coffee br/eak<br/></h1>
+            <h1 className="size-override">Coffee break<br/></h1>
             <p>• Sándwich de pollo deshilachado y mayonesa o empanada de pollo.<br/>
-            • Alfajor o br/ownie.<br/>
+            • Alfajor o brownie.<br/>
             • Café o refresco maracuya o cocona o chicha morada. </p> <br/>
             <p> • Sándwich de pollo deshilachado y mayonesa o empanada de pollo.<br/>
               • Arroz chaufa con chorizo y huevo frito.<br/>
