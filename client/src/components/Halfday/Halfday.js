@@ -55,7 +55,7 @@ function Halfday() {
       <div className="col s4" id = "right">
         <div className="card">
           <div className="card-image">
-            <img src="images/PLAZA MAYOR TARAPOTO.JPG"/>
+            <img src="images/plazamayor.JPG"/>
             <span className="card-title"> City Tours</span>
           </div>
           <div className="card-content">
