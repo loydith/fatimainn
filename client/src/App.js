@@ -54,7 +54,7 @@ export default class App extends React.Component {
         username: res.data.username,
         id: res.data.id
       });
-    }).catch( error => alert("Login failed"))
+    })
   }
   handleReservaciones = (reservation) => {
     console.log(reservation)

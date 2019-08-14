@@ -12,7 +12,8 @@ export default class Booking extends React.Component {
       guests_adult: '1',
       guests_child: '0',
       room_qty: '1',
-      room_type: 'Habitación Individual Economica'
+      room_type: 'Habitación Individual Economica',
+      validationError: false
     }
   }
   handleReservaciones = (event) => {
@@ -28,6 +29,7 @@ export default class Booking extends React.Component {
       this.props.handleReservaciones(this.state);
     } else {
       console.log('Error')
+      this.setState({validationError: true})
     }
     this.setState({email: '', check_out: '', full_name: '', phone: '', check_in: '', rooms: '', guests_adult: '', guests_child: '', room_qty: '', room_type: ''});
   }
@@ -155,6 +157,7 @@ export default class Booking extends React.Component {
                 <div className='btn-div col s12'>
                  <input id='add-event' className='btn btn-info' type='submit' value='Reserva' onClick={this.handleReservaciones}/>
                 </div>
+                {this.state.validationError? <div id="validationError">Please fill out missing information.</div> : null}
               </form>
             
           

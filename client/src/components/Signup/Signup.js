@@ -5,7 +5,8 @@ export default class signup extends React.Component {
     this.state = {
       username: '',
       password: '',
-      password2: ''
+      password2: '',
+      validationError: false
     }
   }
   handleSignUp = (event) => {
@@ -56,6 +57,7 @@ export default class signup extends React.Component {
               Already have an account? <a href='/login'>Login</a> here.
           </div>
           </div>
+          {this.state.validationError? <div id="validationError">Please fill out missing information.</div> : null}
         </form>
       </div>
     );

@@ -1,10 +1,13 @@
 import React from 'react';
+import axios from 'axios';
 export default class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      validationError: false,
+      validationMessage: ""
     }
   }
   handleLogin = (event) => {
@@ -12,7 +15,26 @@ export default class Login extends React.Component {
     const user = {
       username: this.state.username,
       password: this.state.password
-    }
+    };
+    
+    axios.post('/api/login', user).then(({data}) => {
+      console.log(data)
+    }).catch(err => {
+      if (err) {
+        console.log(err)
+        if (err.response.status === 401) {
+          this.setState({ 
+            validationError: true,
+            validationMessage: "Invalid credentials"
+           })  
+        }
+        if (err.response.status === 400) {
+          this.setState({ validationError: true,
+            validationMessage: "Please fill out missing information"
+           })
+        }
+      }
+    })
 
     this.setState({username: '', password: ''});
 
@@ -47,6 +69,7 @@ export default class Login extends React.Component {
               Don't have an account yet? <a href='/signup'>Sign Up</a> here.
           </div>
           </div>
+          {this.state.validationError? <div id="validationError">{this.state.validationMessage}</div> : null}
         </form>
       </div>
     );
