@@ -20,6 +20,8 @@ export default class Contact extends React.Component {
       textarea: this.state.message
     };
     this.props.handleEmail(data);
+
+    this.setState({name: '', subject: '', email: '', telephone: '', message: ''});
   }
   handleChange = (event) => {
     const { name, value } = event.target || event.srcElement;
@@ -36,31 +38,31 @@ export default class Contact extends React.Component {
             <div className="row">
               <div className="input-field col s6">
                 <i className="material-icons prefix"></i>
-                <input onChange={this.handleChange} placeholder="Full Name" id="full_name" type="text" name="name" className="validate" />
+                <input onChange={this.handleChange} placeholder="Full Name" id="full_name" value={this.state.name} type="text" name="name" className="validate" />
                 <label htmlFor="full_name"><i className="material-icons">person</i></label>
               </div>
               <div className="input-field col s6">
                 <i className="material-icons prefix"></i>
-                <input onChange={this.handleChange} placeholder="Email" id="email" type="email" name="email" className="validate" />
+                <input onChange={this.handleChange} placeholder="Email" id="email" value={this.state.email} type="email" name="email" className="validate" />
                 <label htmlFor="email"><i className="material-icons">email</i></label>
               </div>
             </div>
             <div className="row">
               <div className="input-field col s6">
                 <i className="material-icons prefix"></i>
-                <input onChange={this.handleChange} placeholder="Subject" id="subject" type="text" name="subject" className="validate" />
+                <input onChange={this.handleChange} placeholder="Subject" id="subject" value={this.state.subject} type="text" name="subject" className="validate" />
                 <label htmlFor="subject"><i className="material-icons">subject</i></label>
               </div>
               <div className="input-field col s6">
                 <i className="material-icons prefix"></i>
-                <input onChange={this.handleChange} placeholder="+(51) 555 555 555" id="phone" type="tel" name="telephone" className="validate" />
+                <input onChange={this.handleChange} placeholder="+(51) 555 555 555" id="phone" value={this.state.telephone} type="tel" name="telephone" className="validate" />
                 <label htmlFor="phone"><i className="material-icons">phone</i></label>
               </div>
             </div>
             <div className="row">
               <div className="input-field col s12">
                 <i className="material-icons prefix"></i>
-                <textarea onChange={this.handleChange} placeholder="Message" id="textarea2" name="message" className="materialize-textarea" data-length="120" style={{ height: `${200}PX` }}></textarea>
+                <textarea onChange={this.handleChange} placeholder="Message" id="textarea2" value={this.state.message} name="message" className="materialize-textarea" data-length="120" style={{ height: `${200}PX` }}></textarea>
                 <label htmlFor="textarea2"><i className="material-icons">message</i></label>
               </div>
             </div>

@@ -29,6 +29,7 @@ export default class Booking extends React.Component {
     } else {
       console.log('Error')
     }
+    this.setState({email: '', check_out: '', full_name: '', phone: '', check_in: '', rooms: '', guests_adult: '', guests_child: '', room_qty: '', room_type: ''});
   }
   handleChange = (event) => {
     const { id, value } = event.target || event.srcElement;
@@ -43,37 +44,37 @@ export default class Booking extends React.Component {
             <form className='col s6' id='reserve-form'>
               <h2 className='user-text'>Traveler Information</h2>
               <div className='input-field col s12'>
-                 <input onChange={this.handleChange} placeholder='John Doe' id='full_name' type='text' className='validate'/>
+                 <input onChange={this.handleChange} placeholder='John Doe' id='full_name' value={this.state.full_name} type='text' className='validate'/>
                   <label htmlFor='full_name'><i className='fas fa-user'></i> Full Name</label>
               </div>
       
               <div className='input-field col s6'>
                   <label htmlFor='email'><i className='far fa-envelope'></i> Email</label>
-                 <input onChange={this.handleChange} id='email' type='email' className='validate'/>
+                 <input onChange={this.handleChange} id='email' value={this.state.email} type='email' className='validate'/>
               </div>
       
               <div className='input-field col s6'>
                   <label htmlFor='phone'><i className='fas fa-phone'></i> Phone</label>
-                 <input onChange={this.handleChange} id='phone' type='tel' className='validate'/>
+                 <input onChange={this.handleChange} id='phone' value={this.state.phone} type='tel' className='validate'/>
               </div>
       
               <h2 className='date-text'>Travel Dates</h2>
                   
               <div className='col s6'>
                   <label htmlFor='start-date-input' id='check_in'><i className='far fa-calendar-alt'></i>Check In</label>
-                 <input onChange={this.handleChange} type='date' id='check_in'/><br/>
+                 <input onChange={this.handleChange} type='date' id='check_in' value={this.state.check_in}/><br/>
               </div>
       
               <div className='col s6'>
                   <label htmlFor='end-date-input' id='check_out'><i className='far fa-calendar-alt'></i>Check Out</label>
-                 <input onChange={this.handleChange} type='date' id='check_out'/><br/>
+                 <input onChange={this.handleChange} type='date' id='check_out' value={this.state.check_out}/><br/>
               </div>
       
                 <h2 className='room-text'>Room Details</h2>
                 
               <div className='col s12'>
                   <label>How many rooms?</label>
-                  <select onChange={this.handleChange} className='browser-default' id='room_qty'>
+                  <select onChange={this.handleChange} className='browser-default' id='room_qty' value={this.state.room_qty}>
                     <option value='1'>1</option>
                     <option value='2'>2</option>
                     <option value='3'>3</option>
@@ -83,7 +84,7 @@ export default class Booking extends React.Component {
       
               <div className='col s6'>
                   <label>How many adults?</label>
-                  <select onChange={this.handleChange} className='browser-default' id='guests_adult'>
+                  <select onChange={this.handleChange} className='browser-default' id='guests_adult' value={this.state.guests_adult}>
                     <option value='1'>1 Adult</option>
                     <option value='2'>2 Adults</option>
                     <option value='3'>3 Adults</option>
@@ -93,7 +94,7 @@ export default class Booking extends React.Component {
       
               <div className='col s6'>
                   <label>How many children?</label>
-                  <select onChange={this.handleChange} className='browser-default' id='guests_child'>
+                  <select onChange={this.handleChange} className='browser-default' id='guests_child' value={this.state.guests_child}>
                     <option value='0'>0 Children</option>
                     <option value='1'>1 Children</option>
                     <option value='2'>2 Children</option>

@@ -13,6 +13,9 @@ export default class Login extends React.Component {
       username: this.state.username,
       password: this.state.password
     }
+
+    this.setState({username: '', password: ''});
+
     console.log(user)
     this.props.handleLogin(user);
   }
@@ -29,11 +32,11 @@ export default class Login extends React.Component {
         <form className='mt-3' id='login-form'>
           <div className='form-group'>
             <label htmlFor='username' id='usernameText'>Username</label>
-            <input onChange={this.handleChange} type='text' className='form-control' id='username' name="username" placeholder='Enter username' />
+            <input onChange={this.handleChange} type='text' className='form-control' id='username' name="username" value={this.state.username} placeholder='Enter username' />
           </div>
           <div className='form-group'>
             <label htmlFor='pass' id='passText'>Password</label>
-            <input  onChange={this.handleChange}  type='password' className='form-control' id='pass' name="password" placeholder='Password' />
+            <input  onChange={this.handleChange}  type='password' className='form-control' id='pass' name="password" value={this.state.password} placeholder='Password' />
           </div>
           <div className='text-center'>
             <button type='submit' id='login' className='btn btn-danger' onClick={this.handleLogin}>Submit</button>
