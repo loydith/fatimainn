@@ -20,6 +20,8 @@ export default class signup extends React.Component {
     } else {
       console.log('Error')
     }
+
+    this.setState({username: '', password: '', password2: ''});
   }
   handleChange = (event) => {
     const { name, value } = event.target || event.srcElement;
@@ -35,15 +37,15 @@ export default class signup extends React.Component {
         <form className='mt-3' id='signup-form'>
           <div className='form-group'>
             <label htmlFor='username' id='usernameText'>Username</label>
-            <input onChange={this.handleChange} type='text' className='form-control' id='username' name="username" placeholder='Enter a username' />
+            <input onChange={this.handleChange} type='text' className='form-control' id='username' name="username" value={this.state.username} placeholder='Enter a username' />
           </div>
           <div className='form-group'>
             <label htmlFor='pass' id='passText'>Password</label>
-            <input onChange={this.handleChange} type='password' className='form-control' id='pass' name="password" placeholder='Password' />
+            <input onChange={this.handleChange} type='password' className='form-control' id='pass' name="password" value={this.state.password} placeholder='Password' />
           </div>
           <div className='form-group'>
             <label htmlFor='pass2' id='passText'>Confirm Password</label>
-            <input onChange={this.handleChange} type='password' className='form-control' id='pass2' name="password2" placeholder='Confirm Password' />
+            <input onChange={this.handleChange} type='password' className='form-control' id='pass2' name="password2" value={this.state.password2} placeholder='Confirm Password' />
           </div>
           <div className='text-center'>
             <button type='submit' id='signup' value='login' className='btn btn-danger' onClick={this.handleSignUp}>Submit</button>
