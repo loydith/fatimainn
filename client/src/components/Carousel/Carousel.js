@@ -2,62 +2,21 @@ import React from 'react';
 function Carousel() {
   return (
     <React.Fragment>
-      <div className="slider">
-        <ul className="slides">
-          <li>
-            <img src="/images/HMatrimonial2.JPG" />
-          </li>
-          <li>
-            <img src="/images/HIndividual1.JPG" />
-          </li>
-          <li>
-            <img src="/images/Hab2Camas2.JPG" />
-          </li>
-          <li>
-            <img src="/images/HIndividual2.JPG" />
-          </li>
-          <li>
-            <img src="/images/DesayunoCecina-FatimaInn.JPG" />
-          </li>
-          <li>
-            <img src="/images/HIndividual3.JPG" />
-          </li>
-          <li>
-            <img src="/images/HIndividual4.JPG" />
-          </li>
+  
+<div className="carousel">
+    <a className="carousel-item" href="#one"><img src="/images/Reception-HotelFatimaInn.jpg"/></a>
+    <a className="carousel-item" href="#two"><img src="/images/Reception-HotelFatimaInn1.jpg"/></a>
+    <a className="carousel-item" href="#three"><img src="/images/Reception-HotelFatimaInn2.jpg"/></a>
+    <a className="carousel-item" href="#four"><img src="/images/Reception-HotelFatimaInn3.jpg"/></a>
+    <a className="carousel-item" href="#five"><img src="/images/Reception-HotelFatimaInn4.jpg"/></a>
+    <a className="carousel-item" href="#six"><img src="/images/ComedorPrincipal-HotelFatimaInn1.jpg"/></a>
+    <a className="carousel-item" href="#seven"><img src="/images/ComedorPrincipal-HotelFatimaInn2.jpg"/></a>
+    <a className="carousel-item" href="#eight"><img src="/images/DesayunoCecina-FatimaInn.jpg"/></a>
+    <a className="carousel-item" href="#nine"><img src="/images/DesayunoGourmet-FatimaInn1.jpg"/></a>
+    <a className="carousel-item" href="#ten"><img src="/auditorios/ConferenceRoom-HotelFatimaInn1.jpg"/></a>
+    <a className="carousel-item" href="#eleven"><img src="/auditorios/ConferenceRoom-HotelFatimaInn2.jpg"/></a>
+  </div>
 
-          <li>
-            <img src="/images/HMatrimonial3.JPG" />
-          </li>
-          <li>
-            <img src="/images/HMatrimonial4.JPG" />
-          </li>
-          <li>
-            <img src="/images/Hab2Camas1.JPG" />
-          </li>
-          <li>
-            <img src="/images/Restroom-HotelFatimaInn.JPG" />
-          </li>
-          <li>
-            <img src="/images/Restroom1-HotelFatimaInn.JPG" />
-          </li>
-          <li>
-            <img src="/images/Reception-HotelFatimaInn9.jpg" />
-          </li>
-          <li>
-            <img src="/images/Reception-HotelFatimaInn.JPG" />
-          </li>
-          <li>
-            <img src="/images/Reception-HotelFatimaInn2.JPG" />
-          </li>
-          <li>
-            <img src="/images/ComedorPrincipal-HotelFatimaInn1.JPG" />
-          </li>
-          <li>
-            <img src="/images/ComedorPrincipal-HotelFatimaInn2.JPG" />
-          </li>
-        </ul>
-      </div>
     </React.Fragment>
   );
 }
