@@ -30,7 +30,7 @@ export default class Contact extends React.Component {
       }
     });
     if (!isEmpty) {
-      this.props.handleContactFormSubmission(this.state);
+      this.props.handleEmail(this.state);
     } else {
       console.log('Error')
       this.setState({validationError: true})
