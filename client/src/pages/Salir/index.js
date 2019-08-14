@@ -1,12 +1,12 @@
 import React from 'react';
-import Carousel from '../../components/Carousel'
-import Card from '../../components/IndexCard';
-export default class Salir extends React.Component {
+import Slider from '../../components/Slider/Slider'
+import IndexCard from '../../components/IndexCard/Card';
+export default class Home extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Carousel />
-                <Card />
+                <Slider />
+                <IndexCard />
             </React.Fragment>
         )
     }

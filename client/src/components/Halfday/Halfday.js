@@ -1,7 +1,10 @@
 import React from 'react';
+import SlideHalfDay from '../SlideHalfDay/SlideHalfDay';
 function Halfday() {
     return (
+
 <div>
+<SlideHalfDay/>
 <form action="#"><p  id="orange"></p></form>
   <h5 id="card">Tours de Media día</h5>
 <form action="#"><p  id="orange"></p></form>
