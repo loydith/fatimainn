@@ -13,3 +13,8 @@ $(document).ready(function(){
   $('.modal').modal();
   $('.carousel').carousel();
 });
+// materialized boxes
+$(document).ready(function(){
+  $('.materialboxed').materialbox();
+});
+      

@@ -25,11 +25,16 @@ function Explore() {
       horas para realizar su reserva.
     </p>
     <Carousel/>
+    <br></br>
+<div style={{ width: "100%",  }}>
 <Iframe url="forecast.html"
-  width="450px"
+  frameBorder={0}
+  width="100%"
   height="450px"
   display="initial"
   position="relative" />    
-    </div>);
+    </div>
+    </div>
+  );
 }
 export default Explore;

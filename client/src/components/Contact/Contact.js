@@ -7,7 +7,8 @@ export default class Contact extends React.Component {
       subject: '',
       email: '',
       telephone: '',
-      message: ''
+      message: '',
+      validationError: false
     }
   }
   handleContactFormSubmission = (event) => {
@@ -20,6 +21,20 @@ export default class Contact extends React.Component {
       textarea: this.state.message
     };
     this.props.handleEmail(data);
+
+    const allValues = Object.keys(this.state);
+    let isEmpty = false;
+    allValues.forEach(e => {
+      if(this.state[e] === '') {
+        isEmpty = true
+      }
+    });
+    if (!isEmpty) {
+      this.props.handleContactFormSubmission(this.state);
+    } else {
+      console.log('Error')
+      this.setState({validationError: true})
+    }
 
     this.setState({name: '', subject: '', email: '', telephone: '', message: ''});
   }
@@ -72,6 +87,7 @@ export default class Contact extends React.Component {
                 <i className="material-icons left">email</i>
               </button>
             </div>
+            {this.state.validationError? <div id="validationError">Please fill out missing information.</div> : null}
           </form>
   
           <div className="col s5 topCard" id="links">
