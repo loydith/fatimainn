@@ -10,10 +10,7 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import ConferenceRoom from './components/ConferenceRoom/ConferenceRoom';
 
-
-
 // Pages
-
 
 import Dashboard from './pages/Dashboard';
 import DiaCompleto from './pages/DiaCompleto';

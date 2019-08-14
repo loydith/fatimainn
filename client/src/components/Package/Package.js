@@ -1,7 +1,9 @@
 import React from 'react';
+import SlidePackage from '../SlidePackage/SlidePackage';
 function Package() {
     return (
 <div>
+  <SlidePackage/>
 <form action="#"><p  id="orange"></p></form>
   <h5 id="card">Paquetes Turisticos "Habitaciones + Tours"</h5>
 <form action="#"><p  id="orange"></p></form>

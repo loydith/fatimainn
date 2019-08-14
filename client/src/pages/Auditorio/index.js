@@ -7,8 +7,9 @@ export default class ConferenceRoom extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <ConferenceRoom />
                 <SlideConference/>
+                <ConferenceRoom />
+                
             </React.Fragment>
         )
     }

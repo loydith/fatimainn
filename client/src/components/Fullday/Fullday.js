@@ -1,7 +1,10 @@
 import React from 'react';
+import SlideFullDay from '../SlideFullDay/SlideFullDay';
 function Fullday() {
     return (
+
 <div>
+<SlideFullDay/>
 <form action="#"><p  id="orange"></p></form>
 <h5 id="card">Tours día completo</h5>
 <form action="#"><p id="orange"></p></form>
