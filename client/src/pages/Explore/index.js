@@ -1,11 +1,11 @@
 import React from 'react';
-import Carousel from '../../components/Carousel/Carousel'
+import Carousel from '../../components/Carousel'
 import Iframe from 'react-iframe'
 
 function Explore() {
   return (
     <div className="container width">
-      <Carousel/>
+     
       <h5 id="card">Fatima Inn</h5>
       <br />
       <p>
@@ -24,6 +24,7 @@ function Explore() {
       disponibles para sus eventos, charlas, capacitaciones, entrenamientos, etc. solo debe contactarnos las 24 horas
       horas para realizar su reserva.
     </p>
+    <Carousel/>
 <Iframe url="forecast.html"
   width="450px"
   height="450px"
