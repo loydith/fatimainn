@@ -1,11 +1,12 @@
 {
-  "name": "fatimainn",
+  "name": "mysql-sequelize-heroku",
   "version": "1.0.0",
   "description": "Web site of Fatima Inn Hotel ",
   "main": "javascript.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/loydith/fatimainn.git"

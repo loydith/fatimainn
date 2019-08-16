@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser'); //hide the ids
 const SessionStore = require('express-session-sequelize')(session.Store);//create the store
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const db = require("./models");
 const passport = require('./passport/index.js');
 // Satitic folder
@@ -35,6 +35,17 @@ app.use(passport.session());
 if (process.env.NODE_ENV === "test") {
     syncOptions.force = true;
 }
+
+// if (process.env.JAWSDB_URL) {
+//     connection = mysql.createConnection(process.env.JAWSDB_URL);
+// }else {
+//     connection = mysql.createConnection({
+//         host: 'localhost',
+//         user: 'root',
+//         password: 'q9fbqj3cbjc82d2f',
+//         database: 'fatimainn_db'
+//     });
+// };
 // email, subject, text
 app.post('/email', (req, res) => {
     //send email here
