@@ -36,7 +36,8 @@ create the database using MySQL
 
 ### Deployed Heroku Link
 Instead of cloning to your pc, you can also view the deployed Heroku app here:
-* [Fatima Inn Heroku App]: https://fatimainnhotel.herokuapp.com/index
+Fatima Inn Heroku App: 
+https://fatimainnhotel.herokuapp.com/index
 
 ### Technologies Used
 * React JS
