@@ -5,8 +5,8 @@ function Carousel() {
   <div class = "container width">
   <div className= "row">
     <div className = "col s12" style={{ display: "flex" }}>
-    <img className="materialboxed" width="200" height="165" src="/images/Reception-HotelFatimaInn.jpg"/>
     <img className="materialboxed" width="200" height="165" src="/images/Reception-HotelFatimaInn1.jpg"/>
+    <img className="materialboxed" width="200" height="165" src="/images/Reception-HotelFatimaInn.jpg"/>
     <img className="materialboxed" width="200" height="165" src="/images/Reception-HotelFatimaInn2.jpg"/>
     <img className="materialboxed" width="200" height="165" src="/images/Reception-HotelFatimaInn4.jpg"/>
     </div>
