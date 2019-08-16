@@ -36,7 +36,7 @@ create the database using MySQL
 
 ### Deployed Heroku Link
 Instead of cloning to your pc, you can also view the deployed Heroku app here:
-* [Bracket Battle Heroku App]: -------
+* [Fatima Inn Heroku App]: https://fatimainnhotel.herokuapp.com/index
 
 ### Technologies Used
 * React JS
